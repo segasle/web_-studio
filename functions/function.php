@@ -14,4 +14,7 @@ function connecting(){
     }else{
         $file = $_SERVER['REQUEST_URI'];
     }
+    include 'template/header.php';
+    include 'page/' . $file . '.php';
+    include 'template/footer.php';
 }
