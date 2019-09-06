@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: sergejslepenkov
- * Date: 2019-09-05
- * Time: 13:01
- */
+function connecting(){
+    $file = '';
+    if (empty($_SERVER['REQUEST_URI'])){
+        $file = 'main';
+    }else{
+        $file = $_SERVER['REQUEST_URI'];
+    }
+}
