@@ -7,9 +7,13 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?t=<?php echo(microtime(true) . rand()); ?>">
 </head>
 <body>
 <header>
-
+    <div class="row align-items-center">
+        <div class="col 12 col-sm-12 col-md-4 col-lg-4 col-xl-4"></div>
+        <div class="col 12 col-sm-12 col-md-4 col-lg-4 col-xl-4"></div>
+        <div class="col 12 col-sm-12 col-md-4 col-lg-4 col-xl-4"></div>
+    </div>
 </header>
