@@ -1,7 +1,9 @@
 <?php
 global $mysqli;
+$bd = 'ca57629_kafe';
+$password = 'Nexvf1998';
 if (empty($mysqli)){
-    $mysqli = mysqli_connect('localhost', 'root', 'root', 'MySitr');
+    $mysqli = mysqli_connect('localhost', $bd, $password, $bd);
     mysqli_set_charset($mysqli, 'UTF8');
 }
 if (mysqli_connect_errno()){
