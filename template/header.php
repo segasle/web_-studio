@@ -12,7 +12,11 @@
 <body>
 <header>
     <div class="row align-items-center">
-        <div class="col 12 col-sm-12 col-md-4 col-lg-4 col-xl-4"></div>
+        <div class="col 12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="logo">
+                <a href="/"><img src="" alt="Логотип"></a>
+            </div>
+        </div>
         <div class="col 12 col-sm-12 col-md-4 col-lg-4 col-xl-4"></div>
         <div class="col 12 col-sm-12 col-md-4 col-lg-4 col-xl-4"></div>
     </div>
