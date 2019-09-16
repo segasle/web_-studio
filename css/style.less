@@ -1,9 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap&subset=cyrillic,cyrillic-ext');
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap&subset=cyrillic,cyrillic-ext');
 @import "reset.less";
 body{
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 15px;
   font-weight: normal;
   font-style: normal;
+}
+div{
+  box-sizing: border-box;
+  &:after, &:before{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.logo{
+  &-link{
+    @wh: 120px;
+    @url: url("/images/logo.svg");
+    background-image: @url;
+    -moz-background-image: @url;
+    -o-background-image: @url;
+    -webkit-background-image: @url;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: @wh;
+    height: @wh;
+    display: inline-block;
+  }
 }
 @import "adaptive.less";
