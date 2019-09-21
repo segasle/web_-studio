@@ -9,11 +9,15 @@ ini_set('error_reporting', E_ALL);
 
 function connecting(){
     $file = '';
-    if (empty($_SERVER['REQUEST_URI'])){
+    if (empty($_GET['page'])){
         $file = 'main';
     }else{
-        $file = $_SERVER['REQUEST_URI'];
+        $file = $_GET['page'];
     }
+//    echo '<pre>';
+//    print_r($_SERVER);
+//    echo '</pre>';
+
     include 'template/header.php';
     include 'page/' . $file . '.php';
     include 'template/footer.php';

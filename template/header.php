@@ -29,6 +29,7 @@
                           <?php
 
                           $url = basename($_SERVER['REQUEST_URI']);
+                          echo $url;
                           global $mysqli;
                           $sql = mysqli_query($mysqli,'SELECT * FROM `menu`');
                           // $active = '';
