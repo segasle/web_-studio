@@ -13,12 +13,12 @@
 <body>
 <header>
     <div class="row align-items-center">
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 order-xs-2">
             <div class="logo">
                 <a href="/" class="logo-link"></a>
             </div>
         </div>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 order-xs-1">
             <div class="menu">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,7 @@
                               } else {
                                   $active = '';
                               }
-                              echo "<li class='av-item " . $active . "'><a href='" . $r['link'] . "' class='nav-link'>" . $r['title'] . "</a></li>";
+                              echo "<li class='nav-item " . $active . "'><a href='" . $r['link'] . "' class='nav-link'>" . $r['title'] . "</a></li>";
                           }
                           ?>
                         </ul>
@@ -46,6 +46,6 @@
                 </nav>
             </div>
         </div>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4"></div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 order-xs-3"></div>
     </div>
 </header>
