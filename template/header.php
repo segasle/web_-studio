@@ -25,11 +25,11 @@
                         <span class="fas fa-align-justify fa-3x"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav justify-content-space-between w-100">
                           <?php
 
                           $url = basename($_SERVER['REQUEST_URI']);
-                          echo $url;
+                          //echo $url;
                           global $mysqli;
                           $sql = mysqli_query($mysqli,'SELECT * FROM `menu`');
                           // $active = '';

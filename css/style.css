@@ -327,4 +327,9 @@ div:before {
   height: 120px;
   display: inline-block;
 }
+@media (min-width: 992px) {
+  .justify-content-space-between {
+    justify-content: space-between;
+  }
+}
 /*# sourceMappingURL=style.css.map */
