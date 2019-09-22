@@ -1,22 +1,28 @@
 //@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap&subset=cyrillic,cyrillic-ext');
 @import "reset.less";
-body{
+
+body {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 15px;
   font-weight: normal;
   font-style: normal;
 }
-div{
+
+div {
   box-sizing: border-box;
-  &:after, &:before{
+
+  &:after, &:before {
     content: '';
     display: block;
     clear: both;
   }
 }
 
-.logo{
-  &-link{
+.header {
+  padding: 20px;
+}
+.logo {
+  &-link {
     @wh: 120px;
     @url: url("/images/logo.svg");
     background-image: @url;
@@ -28,6 +34,15 @@ div{
     width: @wh;
     height: @wh;
     display: inline-block;
+  }
+}
+.menu{
+  #checkbox{
+    &:checked{
+      ~ .collapse{
+        display: block;
+      }
+    }
   }
 }
 @import "adaptive.less";

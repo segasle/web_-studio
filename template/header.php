@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/style.css?t=<?php echo(microtime(true) . rand()); ?>">
 </head>
 <body>
-<header>
+<header class="header">
     <div class="row align-items-center">
         <div class="col-8 col-sm-8 col-md-4 col-lg-4 col-xl-4 order-xs-2">
             <div class="logo">
@@ -20,11 +20,12 @@
         </div>
         <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 order-xs-1">
             <div class="menu">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="fas fa-align-justify fa-3x"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
+                <nav class="navbar navbar-expand-lg navbar-light justify-content-flex-end">
+                    <input type="checkbox" id="checkbox" class="d-none">
+                    <label for="checkbox" class="label-none burger">
+                        <span class="fas fa-align-justify fa-3x" id="btnMenu"></span>
+                    </label>
+                    <div class="collapse navbar-collapse bg-light" id="navbarNav">
                         <ul class="navbar-nav justify-content-space-between w-100">
                           <?php
 
