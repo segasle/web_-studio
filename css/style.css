@@ -321,6 +321,9 @@ div:before {
   display: block;
   clear: both;
 }
+.wrapper {
+  overflow-x: hidden;
+}
 .header {
   background: #1e3189;
   padding: 10px 10px 0 10px;

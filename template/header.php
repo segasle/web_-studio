@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/style.css?t=<?php echo(microtime(true) . rand()); ?>">
 </head>
 <body>
+<div class="wrapper">
 <header class="header">
     <div class="row align-items-center">
         <div class="col-8 col-sm-8 col-md-4 col-lg-2 col-xl-1 order-xs-2">
@@ -52,7 +53,7 @@
         </div>
         <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-6 order-xs-3">
             <div class="info">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5">
                         <a href="https://api.whatsapp.com/send?phone=79153301314" class="btn btn-md btn-pink btn-block"
                            target="_blank">
@@ -68,7 +69,7 @@
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
                         <a href="mailto:segasle@ya.ru" class="btn btn-md btn-pink btn-block"
                            target="_blank">
-                            <i class="fab fa-mail-bulk"></i><span>Написать на почту</span>
+                            <i class="fas fa-envelope"></i><span>Написать на почту</span>
                         </a>
                     </div>
                 </div>
