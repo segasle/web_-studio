@@ -325,6 +325,15 @@ div:before {
   background: #1e3189;
   padding: 10px 10px 0 10px;
 }
+.btn {
+  color: #fff;
+}
+.btn-pink {
+  background: #f97f71;
+}
+.btn span {
+  padding-left: 10px;
+}
 .logo-link {
   background-image: url("/images/logo-light.png");
   -moz-background-image: url("/images/logo-light.png");

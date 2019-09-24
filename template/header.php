@@ -15,12 +15,12 @@
 <body>
 <header class="header">
     <div class="row align-items-center">
-        <div class="col-8 col-sm-8 col-md-4 col-lg-4 col-xl-4 order-xs-2">
+        <div class="col-8 col-sm-8 col-md-4 col-lg-2 col-xl-2 order-xs-2">
             <div class="logo">
                 <a href="/" class="logo-link"></a>
             </div>
         </div>
-        <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 order-xs-1">
+        <div class="col-4 col-sm-4 col-md-4 col-lg-5 col-xl-5 order-xs-1">
             <div class="menu">
                 <nav class="navbar navbar-expand-lg navbar-light justify-content-flex-end">
                     <input type="checkbox" id="checkbox" class="d-none">
@@ -29,30 +29,43 @@
                     </label>
                     <div class="collapse navbar-collapse bg-light" id="navbarNav">
                         <ul class="navbar-nav justify-content-space-between w-100">
-                          <?php
+                            <?php
 
-                          $url = basename($_SERVER['REQUEST_URI']);
-                          //echo $url;
-                          global $mysqli;
-                          $sql = mysqli_query($mysqli,'SELECT * FROM `menu`');
-                          // $active = '';
-                          foreach ($sql as $r) {
-                              if ($r['link'] === $url) {
-                                  $active = 'active';
-                              } else {
-                                  $active = '';
-                              }
-                              echo "<li class='nav-item " . $active . "'><a href='" . $r['link'] . "' class='nav-link'>" . $r['title'] . "</a></li>";
-                          }
-                          ?>
+                            $url = basename($_SERVER['REQUEST_URI']);
+                            //echo $url;
+                            global $mysqli;
+                            $sql = mysqli_query($mysqli, 'SELECT * FROM `menu`');
+                            // $active = '';
+                            foreach ($sql as $r) {
+                                if ($r['link'] === $url) {
+                                    $active = 'active';
+                                } else {
+                                    $active = '';
+                                }
+                                echo "<li class='nav-item " . $active . "'><a href='" . $r['link'] . "' class='nav-link'>" . $r['title'] . "</a></li>";
+                            }
+                            ?>
                         </ul>
                     </div>
                 </nav>
             </div>
         </div>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 order-xs-3">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-5 col-xl-5 order-xs-3">
             <div class="info">
-
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <a href="https://api.whatsapp.com/send?phone=79153301314" class="btn btn-md btn-pink"
+                           target="_blank">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Написать в WhatsÂpp</span>
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <a href="viber://chat?number=79153301314" class="btn btn-md btn-pink"
+                           target="_blank">
+                            <i class="fab fa-viber"></i><span>Написать в Viber</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
