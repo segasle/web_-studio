@@ -54,19 +54,19 @@
             <div class="info">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5">
-                        <a href="https://api.whatsapp.com/send?phone=79153301314" class="btn btn-md btn-pink"
+                        <a href="https://api.whatsapp.com/send?phone=79153301314" class="btn btn-md btn-pink btn-block"
                            target="_blank">
                             <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Написать в WhatsÂpp</span>
                         </a>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                        <a href="viber://chat?number=79153301314" class="btn btn-md btn-pink"
+                        <a href="viber://chat?number=79153301314" class="btn btn-md btn-pink btn-block"
                            target="_blank">
                             <i class="fab fa-viber"></i><span>Написать в Viber</span>
                         </a>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                        <a href="mailto:segasle@ya.ru" class="btn btn-md btn-pink"
+                        <a href="mailto:segasle@ya.ru" class="btn btn-md btn-pink btn-block"
                            target="_blank">
                             <i class="fab fa-mail-bulk"></i><span>Написать на почту</span>
                         </a>
