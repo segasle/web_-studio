@@ -303,9 +303,9 @@ template {
 }
 body {
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 15px;
   font-weight: normal;
   font-style: normal;
+  color: #fff;
 }
 div {
   box-sizing: border-box;
@@ -317,6 +317,7 @@ div:before {
   clear: both;
 }
 .header {
+  background: #1e3189;
   padding: 20px;
 }
 .logo-link {
