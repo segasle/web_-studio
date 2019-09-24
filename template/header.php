@@ -50,6 +50,10 @@
                 </nav>
             </div>
         </div>
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 order-xs-3"></div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 order-xs-3">
+            <div class="info">
+
+            </div>
+        </div>
     </div>
 </header>

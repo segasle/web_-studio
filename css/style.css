@@ -323,7 +323,7 @@ div:before {
 }
 .header {
   background: #1e3189;
-  padding: 20px;
+  padding: 10px 10px 0 10px;
 }
 .logo-link {
   background-image: url("/images/logo-light.png");
