@@ -320,10 +320,10 @@ div:before {
   padding: 20px;
 }
 .logo-link {
-  background-image: url("/images/logo.svg");
-  -moz-background-image: url("/images/logo.svg");
-  -o-background-image: url("/images/logo.svg");
-  -webkit-background-image: url("/images/logo.svg");
+  background-image: url("/images/logo-light.png");
+  -moz-background-image: url("/images/logo-light.png");
+  -o-background-image: url("/images/logo-light.png");
+  -webkit-background-image: url("/images/logo-light.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 120px;
