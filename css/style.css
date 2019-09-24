@@ -343,6 +343,9 @@ div:before {
   }
 }
 @media (min-width: 992px) {
+  .label-none {
+    display: none;
+  }
   .justify-content-space-between {
     justify-content: space-between;
   }
