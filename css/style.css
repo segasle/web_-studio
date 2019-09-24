@@ -1,3 +1,8 @@
+@font-face {
+  src: url("/fonts/Regular/Righteous.ttf");
+  src: url("/fonts/Regular/SoftLineExtra.ttf");
+  font-family: 'SoftLineExtra', 'Righteous';
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -302,7 +307,7 @@ template {
   display: none;
 }
 body {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'SoftLineExtra', sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #fff;

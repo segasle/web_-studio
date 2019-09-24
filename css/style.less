@@ -1,4 +1,9 @@
-//@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap&subset=cyrillic,cyrillic-ext');
+@font-face {
+  src: url("/fonts/Regular/Righteous.ttf");
+  src: url("/fonts/Regular/SoftLineExtra.ttf");
+  font-family: 'SoftLineExtra', 'Righteous';
+}
+
 @import "reset.less";
 @bg1: #1e3189;
 @bg2: #2561f2;
@@ -7,8 +12,10 @@
 @bg5: #5d22b7;
 @bg6: #f97f71;
 @cr: #fff;
+@ff: 'SoftLineExtra';
+@ff2: 'Righteous';
 body {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: @ff, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: @cr;
@@ -28,6 +35,7 @@ div {
   background: @bg1;
   padding: 20px;
 }
+
 .logo {
   &-link {
     @wh: 120px;
@@ -43,13 +51,15 @@ div {
     display: inline-block;
   }
 }
-.menu{
-  #checkbox{
-    &:checked{
-      ~ .collapse{
+
+.menu {
+  #checkbox {
+    &:checked {
+      ~ .collapse {
         display: block;
       }
     }
   }
 }
+
 @import "adaptive.less";
