@@ -330,12 +330,22 @@ div:before {
 }
 .btn {
   color: #fff;
+  -webkit-transition: box-shadow 0.5s;
+  -moz-transition: box-shadow 0.5s;
+  -o-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
 }
 .btn-pink {
   background: #f97f71;
 }
 .btn span {
   padding-left: 10px;
+}
+.btn:hover {
+  -webkit-box-shadow: 2px 2px 10px 2px black;
+  -moz-box-shadow: 2px 2px 10px 2px black;
+  -o-box-shadow: 2px 2px 10px 2px black;
+  box-shadow: 2px 2px 10px 2px black;
 }
 .logo-link {
   background-image: url("/images/logo-light.png");
@@ -350,6 +360,9 @@ div:before {
 }
 .menu #checkbox:checked ~ .collapse {
   display: block;
+  position: absolute;
+  top: 100%;
+  z-index: 10;
 }
 @media (max-width: 992px) {
   .menu .navbar {
