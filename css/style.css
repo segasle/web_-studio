@@ -369,6 +369,12 @@ div:before {
   .label-none {
     display: none;
   }
+  .bg-light {
+    background-color: transparent !important;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: #fff;
+  }
   .justify-content-space-between {
     justify-content: space-between;
   }

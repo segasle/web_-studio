@@ -76,4 +76,66 @@ div {
   }
 }
 
-@import "adaptive.less";
+@media (max-width: 992px) {
+
+  .menu {
+    .navbar{
+      padding: 0;
+    }
+    ul{
+      padding: 0 20px;
+    }
+  }
+  .justify {
+    &-content {
+      &-flex {
+        &-end {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+  .align{
+    &-items {
+      &-center {
+        align-items: inherit !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .label{
+    &-none{
+      display: none;
+    }
+  }
+  .bg{
+    &-light{
+      background-color: transparent !important;
+    }
+  }
+  .navbar-light .navbar-nav .nav-link{
+    color: @cr;
+  }
+  .nav{
+    &-link{
+    }
+  }
+  .justify {
+    &-content {
+      &-space {
+        &-between {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .header{
+    .btn{
+      margin: 10px 0;
+    }
+  }
+}
