@@ -11,40 +11,36 @@
                         Looks good!
                     </div>
                 </div>
-                <div class="col-12 col-md-8 mb-3">
-                    <label for="validationServer02">телефон</label>
-                    <input type="text" class="form-control phone-number is-valid" id="validationServer02"
+                <div class="col-12 col-md-4 mb-3">
+                    <label for="validationServer02">Телефон</label>
+                    <input type="text" class="form-control phone-number is-valid" placeholder="+7(999)999-99-99" id="validationServer02"
+                           required="required">
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <label for="validationServer02">Email</label>
+                    <input type="email" class="form-control is-valid" placeholder="sega@ya.ru" id="validationServer02"
                            required="required">
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <label for="validationServer03">City</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City"
-                           required>
-                    <div class="invalid-feedback">
-                        Please provide a valid city.
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="validationServer04">State</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State"
-                           required>
-                    <div class="invalid-feedback">
-                        Please provide a valid state.
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="validationServer05">Zip</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip"
-                           required>
-                    <div class="invalid-feedback">
-                        Please provide a valid zip.
-                    </div>
-                </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Тема</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Тема">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Example file input</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
             </div>
             <button class="btn btn-pink" type="submit">Отправить</button>
         </form>
