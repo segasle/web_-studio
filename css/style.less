@@ -83,6 +83,15 @@ div {
 }
 
 .menu {
+  .navbar-light{
+
+    .active{
+      border-bottom: 2px solid @bg6;
+      > .nav-link{
+        color: @cr;
+      }
+    }
+  }
   #checkbox {
     &:checked {
       ~ .collapse {
@@ -102,6 +111,14 @@ div {
       padding: 0;
     }
 
+    .navbar-light{
+
+      .active{
+        > .nav-link{
+          color: black;
+        }
+      }
+    }
     ul {
       padding: 0 20px;
     }

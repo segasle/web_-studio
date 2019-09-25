@@ -358,6 +358,12 @@ div:before {
   height: 120px;
   display: inline-block;
 }
+.menu .navbar-light .active {
+  border-bottom: 2px solid #f97f71;
+}
+.menu .navbar-light .active > .nav-link {
+  color: #fff;
+}
 .menu #checkbox:checked ~ .collapse {
   display: block;
   position: absolute;
@@ -367,6 +373,9 @@ div:before {
 @media (max-width: 992px) {
   .menu .navbar {
     padding: 0;
+  }
+  .menu .navbar-light .active > .nav-link {
+    color: black;
   }
   .menu ul {
     padding: 0 20px;
