@@ -2,6 +2,7 @@
     <div class="col-12 col-sm-12 col-md-6"></div>
     <div class="col-12 col-sm-12 col-md-6">
         <form method="post" enctype="multipart/form-data">
+            <p class="h2">Оставьте заявку</p>
             <div class="form-row">
                 <div class="col-12 col-md-4 mb-3">
                     <label for="validationServer01">Имя</label>
@@ -34,12 +35,12 @@
                 <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Тема">
             </div>
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <label for="exampleFormControlTextarea1">Сообщение</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlFile1">Example file input</label>
+                <label for="exampleFormControlFile1">Файл</label>
                 <input type="file" class="form-control-file" id="exampleFormControlFile1">
             </div>
             <button class="btn btn-pink" type="submit">Отправить</button>
