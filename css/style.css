@@ -352,9 +352,6 @@ div:before {
   display: block;
 }
 @media (max-width: 992px) {
-  .header .btn {
-    margin: 10px 0;
-  }
   .menu .navbar {
     padding: 0;
   }
@@ -374,6 +371,11 @@ div:before {
   }
   .justify-content-space-between {
     justify-content: space-between;
+  }
+}
+@media (max-width: 1200px) {
+  .header .btn {
+    margin: 10px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
