@@ -7,11 +7,12 @@ error_reporting(E_ALL);
 error_reporting(-1);
 ini_set('error_reporting', E_ALL);
 
-function connecting(){
+function connecting()
+{
     $file = '';
-    if (empty($_GET['page'])){
+    if (empty($_GET['page'])) {
         $file = 'main';
-    }else{
+    } else {
         $file = $_GET['page'];
     }
 //    echo '<pre>';
@@ -21,4 +22,11 @@ function connecting(){
     include 'template/header.php';
     include 'page/' . $file . '.php';
     include 'template/footer.php';
+}
+
+function mysqli($query)
+{
+    global $mysqli;
+    $result = mysqli_query($mysqli, $query);
+    return $result;
 }
