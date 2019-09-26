@@ -9,9 +9,7 @@
                     <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Имя"
                            name="name"
                            required="required">
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
+
                 </div>
                 <div class="col-12 col-md-4 mb-3">
                     <label for="validationServer02">Телефон</label>
@@ -37,7 +35,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Сообщение</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" name="mess" rows="3"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
             </div>
 
             <div class="form-group">
