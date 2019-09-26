@@ -25,8 +25,8 @@ $(function() {
         }
     });
 
-
-    $(".phone-number").each(function() {
-        $(this).mask("+7(999)999-99-99");
-    });
+    //
+    // $(".phone-number").each(function() {
+    //     $(this).mask("+7(999)999-99-99");
+    // });
 });

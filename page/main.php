@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-12 col-sm-12 col-md-6"></div>
     <div class="col-12 col-sm-12 col-md-6">
-        <?php include 'functions/form.php';?>
+        <?php  feedback();?>
         <form method="post" enctype="multipart/form-data">
             <p class="h2">Оставьте заявку</p>
             <div class="form-row">
