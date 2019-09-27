@@ -2,6 +2,9 @@
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6">
             <h1 class="text-center">У нас нет преград</h1>
+            <div class="block_text">
+                <p class="text">Мы команда профессионалов, которая основана над улучшением IT технологими</p>
+            </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6">
             <form method="post" enctype="multipart/form-data" class="ask-form">

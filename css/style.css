@@ -362,6 +362,7 @@ div:before {
   -webkit-background-size: cover;
   background-size: cover;
   position: relative;
+  background-repeat: no-repeat;
 }
 .bg-images:before {
   min-height: 100%;
