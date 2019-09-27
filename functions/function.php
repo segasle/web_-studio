@@ -98,7 +98,7 @@ function feedback(){
                 }
             }
         }else{
-            echo '';
+            echo '<div class="errors">'.array_shift($errors).'</div>';
         }
     }
 }
