@@ -77,7 +77,7 @@ function feedback(){
 //                                $emailto = 'Почта:' . $email . "<br>";
 //                                $txtto = 'Сообщение:' . $data['content'] . "<br>";
 //                                $mess = $nameto . $phoneto . $emailto . $txtto;
-                                    $wer = mysqli("INSERT INTO `feedback` (`email`, `name`, `phone`, `text`, `dock`) VALUES ('{$email}','{$name}','{$phone}', '{$data['content']}','{$file}')");
+                                    $wer = mysqli("INSERT INTO `feedback` (`email`, `name`, `phone`, `message`, `file`, `topic`) VALUES ('{$email}','{$name}','{$phone}','{$message}','{$file}','{$topic}')");
                                     if (!empty($wer)) {
 //                                    $to = 'jim-owner@yandex.ru';
 //                                    $subject = 'обратная связь';

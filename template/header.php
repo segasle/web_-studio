@@ -33,10 +33,7 @@
                                 <?php
 
                                 $url = basename($_SERVER['REQUEST_URI']);
-                                //echo $url;
-                                global $mysqli;
-                                $sql = mysqli_query($mysqli, 'SELECT * FROM `menu`');
-                                // $active = '';
+                                $sql = mysqli('SELECT * FROM `menu`');
                                 foreach ($sql as $r) {
                                     if ($r['link'] === $url) {
                                         $active = 'active';

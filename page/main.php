@@ -1,5 +1,7 @@
 <div class="row">
-    <div class="col-12 col-sm-12 col-md-6"></div>
+    <div class="col-12 col-sm-12 col-md-6">
+        <h1 class="text-center">У нас нет преград</h1>
+    </div>
     <div class="col-12 col-sm-12 col-md-6">
         <?php  feedback();?>
         <form method="post" enctype="multipart/form-data">
