@@ -39,7 +39,21 @@ div {
   background: @bg1;
   padding: 10px 10px 0 10px;
 }
+form{
 
+}
+.form{
+  &-control{
+    color: @bg6;
+    background-color: transparent;
+    border: 2px solid @bg2;
+    &:focus{
+      background-color: transparent;
+      border: 2px solid @bg2;
+      color: @bg6;
+    }
+  }
+}
 .btn {
   @bs: 2px 2px 10px 2px black;
   @trans: box-shadow .5s;
@@ -65,7 +79,25 @@ div {
 
   }
 }
-
+.bg{
+  &-images{
+    padding: 10px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    &:before{
+      min-height: 100%;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      opacity: 0.4;
+    }
+  }
+}
 .logo {
   &-link {
     @wh: 120px;
@@ -104,11 +136,8 @@ div {
   }
 }
 .content{
-  color: black;
-  padding: 10px;
-}
-form{
-  //background: @bg2;
+ // color: black;
+  //padding: 10px;
 }
 .footer{
   background: @bg3;

@@ -328,6 +328,16 @@ div:before {
   background: #1e3189;
   padding: 10px 10px 0 10px;
 }
+.form-control {
+  color: #f97f71;
+  background-color: transparent;
+  border: 2px solid #2561f2;
+}
+.form-control:focus {
+  background-color: transparent;
+  border: 2px solid #2561f2;
+  color: #f97f71;
+}
 .btn {
   color: #fff;
   -webkit-transition: box-shadow 0.5s;
@@ -346,6 +356,23 @@ div:before {
   -moz-box-shadow: 2px 2px 10px 2px black;
   -o-box-shadow: 2px 2px 10px 2px black;
   box-shadow: 2px 2px 10px 2px black;
+}
+.bg-images {
+  padding: 10px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+.bg-images:before {
+  min-height: 100%;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  opacity: 0.4;
 }
 .logo-link {
   background-image: url("/images/logo-light.png");
@@ -369,10 +396,6 @@ div:before {
   position: absolute;
   top: 100%;
   z-index: 10;
-}
-.content {
-  color: black;
-  padding: 10px;
 }
 .footer {
   background: #3a126b;
