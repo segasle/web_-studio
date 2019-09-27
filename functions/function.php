@@ -30,6 +30,7 @@ function mysqli($query)
     $result = mysqli_query($mysqli, $query);
     return $result;
 }
+
 function feedback(){
     if (isset($_POST['submit'])) {
         $data = $_POST;
@@ -101,4 +102,53 @@ function feedback(){
             echo '<div class="errors">'.array_shift($errors).'</div>';
         }
     }
+}
+
+function ajax_form($form_data) {
+    $file = $_FILES['file'];
+    if(isset($file)) {
+        return 2;
+    } else {
+        return 3;
+    }
+    // КОДЫ ОШИБОК ДЛЯ AJAX
+    // 0 - неизвестная ошибка
+    // 1 - все ОК
+    // 2 - не введено имя
+    // 3 - не введен телефон или почта
+    // 4 - ошибка записи в БД
+    // 23 - имя и телефон с email
+    $data = $form_data;
+    $name = trim($data['name']);
+    $phone = $data['phone'];
+    $email = trim($data['email']);
+    if(!preg_match("/^[a-zA-Zа-яА-Я]+$/ui", $name)) {
+        if (!preg_match("/(^(?!\+.*\(.*\).*\-\-.*$)(?!\+.*\(.*\).*\-$)(\+[0-9]{1,3}\([0-9]{1,3}\)[0-9]{1}([-0-9]{0,8})?([0-9]{0,1})?)$)|(^[0-9]{1,4}$)/", "$phone") and !preg_match("/^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.*@.+(\..{1,11})?)$/", "$email")) {
+            return 23;
+        } else {
+            return 2;
+        }
+    } else {
+        if (!preg_match("/(^(?!\+.*\(.*\).*\-\-.*$)(?!\+.*\(.*\).*\-$)(\+[0-9]{1,3}\([0-9]{1,3}\)[0-9]{1}([-0-9]{0,8})?([0-9]{0,1})?)$)|(^[0-9]{1,4}$)/", "$phone") and !preg_match("/^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.*@.+(\..{1,11})?)$/", "$email")) {
+            return 3;
+        } else {
+            if (empty($data['topic'])) {
+                $topic = 0;
+            } else {
+                $topic = $data['topic'];
+            }
+            if (empty($data['message'])) {
+                $message = 0;
+            } else {
+                $message = $data['message'];
+            }
+            $res = mysqli("INSERT INTO `feedback`(`name`, `phone`, `email`, `topic`, `message`) VALUES ('{$name}','{$phone}','{$email}','{$topic}','{$message}')");
+            if ($res) {
+                return 1;
+            } else {
+                return 4;
+            }
+        }
+    }
+    return 0;
 }

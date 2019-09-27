@@ -29,4 +29,71 @@ $(function() {
     $(".phone-number").each(function() {
         $(this).mask("+7(999)999-99-99");
     });
+
+
+    $('#ajaxBut').click(function (e) {
+        e.preventDefault();
+        $('.name').removeClass('is-valid').removeClass('is-invalid');
+        $('.phone-number').removeClass('is-valid').removeClass('is-invalid');
+        $('.email').removeClass('is-valid').removeClass('is-invalid');
+        $('#ansName').html('');
+        $('#ansPhone').html('');
+        $('#ansEmail').html('');
+        $('#ajaxAnsw').html('');
+        var form = $('#ajaxBut').closest('form').serialize();
+        var formData = new FormData($(form)[1]);
+        var a = 5;
+        $.ajax({
+            type: "POST",
+            url: "/functions/senddata.php",
+            data: form.serialize(),
+            success: function (data) {
+                if (data == 0 || data == 4) {
+                    $('#ajaxAnsw').html('<div class="alert alert-danger">Ошибка отправки формы</div>');
+                    $('.name').addClass('is-invalid');
+                    $('.phone-number').addClass('is-invalid');
+                    $('.email').addClass('is-invalid');
+                    $('.topic').addClass('is-invalid');
+                    $('.message').addClass('is-invalid');
+                } else if (data == 1) {
+                    $('#ajaxAnsw').html('<div class="alert alert-success">Успешно отправлено</div>');
+                    $('.name').addClass('is-valid');
+                    $('.phone-number').addClass('is-valid');
+                    $('.email').addClass('is-valid');
+                    $('.topic').addClass('is-valid');
+                    $('.message').addClass('is-valid');
+                } else if (data == 2) {
+                    $('.name').addClass('is-invalid');
+                    $('#ansName').html('<div class="d-block invalid-feedback">Введите имя</div>');
+                    $('.phone-number').addClass('is-valid');
+                    $('.email').addClass('is-valid');
+                } else if(data == 23) {
+                    $('.name').addClass('is-invalid');
+                    $('#ansName').html('<div class="d-block invalid-feedback">Введите имя</div>');
+                    $('.phone-number').addClass('is-invalid');
+                    $('#ansPhone').html('<div class="d-block invalid-feedback">Введите телефон</div>');
+                    $('.email').addClass('is-invalid');
+                    $('#ansEmail').html('<div class="d-block invalid-feedback">или электронную почту</div>');
+                } else if (data == 3) {
+                    $('.name').addClass('is-valid');
+                    $('.phone-number').addClass('is-invalid');
+                    $('#ansPhone').html('<div class="d-block invalid-feedback">Введите телефон</div>');
+                    $('.email').addClass('is-invalid');
+                    $('#ansEmail').html('<div class="d-block invalid-feedback">или электронную почту</div>');
+                } else {
+                    $('#ajaxAnsw').html('<div class="errors">Ошибка отправки формы</div>');
+                }
+            },
+            error: function () {
+                $('#ajaxAnsw').html('<div class="alert alert-danger">Ошибка отправки формы</div>');
+                $('.name').addClass('is-invalid');
+                $('.phone-number').addClass('is-invalid');
+                $('.email').addClass('is-invalid');
+                $('.topic').addClass('is-invalid');
+                $('.message').addClass('is-invalid');
+            }
+        });
+    });
+
+
 });
