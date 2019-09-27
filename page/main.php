@@ -4,7 +4,6 @@
             <h1 class="text-center">У нас нет преград</h1>
         </div>
         <div class="col-12 col-sm-12 col-md-6">
-            <!--<?php feedback(); ?>-->
             <form method="post" enctype="multipart/form-data" class="ask-form">
                 <p class="h2">Оставьте заявку</p>
                 <div id="ajaxAnsw"></div>
@@ -38,7 +37,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1" class="col-form-label-lg">Сообщение</label>
-                    <textarea class="form-control message" id="exampleFormControlTextarea1" name="message"
+                    <textarea class="form-control message form-control-lg" id="exampleFormControlTextarea1" name="message"
                               rows="3"></textarea>
                 </div>
 
