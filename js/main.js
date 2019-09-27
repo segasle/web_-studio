@@ -40,13 +40,17 @@ $(function() {
         $('#ansPhone').html('');
         $('#ansEmail').html('');
         $('#ajaxAnsw').html('');
-        var form = $('#ajaxBut').closest('form').serialize();
-        var formData = new FormData($(form)[1]);
-        var a = 5;
+        var form = $('#ajaxBut').closest('form');
+        var formElement = document.getElementsByClassName("ask-form");
+        var formData = new FormData(formElement[0]);
         $.ajax({
             type: "POST",
             url: "/functions/senddata.php",
-            data: form.serialize(),
+            data: formData,
+            dataType: 'json',
+            contentType: false,
+            cache: false,
+            processData:false,
             success: function (data) {
                 if (data == 0 || data == 4) {
                     $('#ajaxAnsw').html('<div class="alert alert-danger">Ошибка отправки формы</div>');
@@ -80,20 +84,34 @@ $(function() {
                     $('#ansPhone').html('<div class="d-block invalid-feedback">Введите телефон</div>');
                     $('.email').addClass('is-invalid');
                     $('#ansEmail').html('<div class="d-block invalid-feedback">или электронную почту</div>');
+                } else if(data == 5) {
+                    $('#ajaxFile').html('<div class="alert alert-danger">Файл не должен превышать 3Мб</div>');
+                    $('.name').addClass('is-valid');
+                    $('.phone-number').addClass('is-valid');
+                    $('.email').addClass('is-valid');
+                    $('.topic').addClass('is-valid');
+                    $('.message').addClass('is-valid');
+                } else if (data == 6) {
+                    $('#ajaxFile').html('<div class="alert alert-danger">Неверный формат файла(jpeg, jpg, png, xlsx, docx)</div>');
+                    $('.name').addClass('is-valid');
+                    $('.phone-number').addClass('is-valid');
+                    $('.email').addClass('is-valid');
+                    $('.topic').addClass('is-valid');
+                    $('.message').addClass('is-valid');
+                } else if (data == 7) {
+                    $('#ajaxFile').html('<div class="alert alert-danger">Ошибка загрузки файла</div>');
+                    $('.name').addClass('is-valid');
+                    $('.phone-number').addClass('is-valid');
+                    $('.email').addClass('is-valid');
+                    $('.topic').addClass('is-valid');
+                    $('.message').addClass('is-valid');
                 } else {
-                    $('#ajaxAnsw').html('<div class="errors">Ошибка отправки формы</div>');
+                    $('#ajaxAnsw').html('<div class="alert alert-danger">Ошибка отправки формы</div>');
                 }
             },
-            error: function () {
-                $('#ajaxAnsw').html('<div class="alert alert-danger">Ошибка отправки формы</div>');
-                $('.name').addClass('is-invalid');
-                $('.phone-number').addClass('is-invalid');
-                $('.email').addClass('is-invalid');
-                $('.topic').addClass('is-invalid');
-                $('.message').addClass('is-invalid');
+            error: function (error, exception) {
+                $('#ajaxAnsw').html(error.responseText);
             }
         });
     });
-
-
 });

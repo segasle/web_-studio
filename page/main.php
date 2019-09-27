@@ -1,5 +1,6 @@
 <div class="row">
     <div class="col-12 col-sm-12 col-md-6">
+
         <h1 class="text-center">У нас нет преград</h1>
     </div>
     <div class="col-12 col-sm-12 col-md-6">
@@ -17,9 +18,6 @@
                     <label for="validationServer02" class="col-form-label-lg">Телефон</label>
                     <input type="text" class="form-control phone-number form-control-lg" placeholder="+7(999)999-99-99"
                            name="phone" id="validationServer02">
-                    <!--<div class="valid-feedback">
-                        Looks good!
-                    </div>-->
                     <div id="ansPhone"></div>
                 </div>
                 <div class="col-12 col-md-4 mb-3">
@@ -40,6 +38,7 @@
             </div>
 
             <div class="form-group">
+                <div id="ansFile"></div>
                 <label for="exampleFormControlFile1" class="col-form-label-lg">Файл</label>
                 <input type="file" class="form-control-file form-control-lg" name="file" style="padding: 0;" id="exampleFormControlFile1">
             </div>

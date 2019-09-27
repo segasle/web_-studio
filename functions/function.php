@@ -31,7 +31,8 @@ function mysqli($query)
     return $result;
 }
 
-function feedback(){
+function feedback()
+{
     if (isset($_POST['submit'])) {
         $data = $_POST;
         $name = trim($data['name']);
@@ -98,19 +99,19 @@ function feedback(){
                     }
                 }
             }
-        }else{
-            echo '<div class="errors">'.array_shift($errors).'</div>';
+        } else {
+            echo '<div class="errors">' . array_shift($errors) . '</div>';
         }
     }
 }
 
-function ajax_form($form_data) {
-    $file = $_FILES['file'];
-    if(isset($file)) {
-        return 2;
+function ajax_form($form_data)
+{
+    /*if($_FILES['file']['size'] > 0) {
+        return 100;
     } else {
-        return 3;
-    }
+        return 200;
+    }*/
     // КОДЫ ОШИБОК ДЛЯ AJAX
     // 0 - неизвестная ошибка
     // 1 - все ОК
@@ -118,11 +119,14 @@ function ajax_form($form_data) {
     // 3 - не введен телефон или почта
     // 4 - ошибка записи в БД
     // 23 - имя и телефон с email
+    // 5 - большой файл
+    // 6 - неправильный формат файла
+    // 7 - ошибка файла
     $data = $form_data;
     $name = trim($data['name']);
     $phone = $data['phone'];
     $email = trim($data['email']);
-    if(!preg_match("/^[a-zA-Zа-яА-Я]+$/ui", $name)) {
+    if (!preg_match("/^[a-zA-Zа-яА-Я]+$/ui", $name)) {
         if (!preg_match("/(^(?!\+.*\(.*\).*\-\-.*$)(?!\+.*\(.*\).*\-$)(\+[0-9]{1,3}\([0-9]{1,3}\)[0-9]{1}([-0-9]{0,8})?([0-9]{0,1})?)$)|(^[0-9]{1,4}$)/", "$phone") and !preg_match("/^(?!.*@.*@.*$)(?!.*@.*\-\-.*\..*$)(?!.*@.*\-\..*$)(?!.*@.*\-$)(.*@.+(\..{1,11})?)$/", "$email")) {
             return 23;
         } else {
@@ -142,11 +146,45 @@ function ajax_form($form_data) {
             } else {
                 $message = $data['message'];
             }
-            $res = mysqli("INSERT INTO `feedback`(`name`, `phone`, `email`, `topic`, `message`) VALUES ('{$name}','{$phone}','{$email}','{$topic}','{$message}')");
-            if ($res) {
-                return 1;
+            if ($_FILES['file']['size'] > 0) {
+                $update = $_SERVER['DOCUMENT_ROOT'] . '/download/';
+                $file = $_FILES['file']['name'];
+                $update_file = $update . $file;
+                if (!file_exists($update_file)) {
+                    if (is_uploaded_file($_FILES['file']['tmp_name'])) {
+                        if ($_FILES['file']['size'] > 1024 * 3 * 1024) {
+                            return 5;
+                        } else {
+                            $ext = pathinfo($update_file, PATHINFO_EXTENSION);
+                            $allow = array('jpeg', 'jpg', 'png', 'xlsx', 'docx');
+                            if (in_array($ext, $allow)) {
+                                if (move_uploaded_file($_FILES['file']['tmp_name'], $update_file)) {
+                                    $res = mysqli("INSERT INTO `feedback`(`name`, `phone`, `email`, `topic`, `message`, `file`) VALUES ('{$name}','{$phone}','{$email}','{$topic}','{$message}', '{$file}')");
+                                    if ($res) {
+                                        return 1;
+                                    } else {
+                                        return 4;
+                                    }
+                                } else {
+                                    return 7;
+                                }
+                            } else {
+                                return 6;
+                            }
+                        }
+                    } else {
+                        return 7;
+                    }
+                } else {
+                    return 7;
+                }
             } else {
-                return 4;
+                $res = mysqli("INSERT INTO `feedback`(`name`, `phone`, `email`, `topic`, `message`) VALUES ('{$name}','{$phone}','{$email}','{$topic}','{$message}')");
+                if ($res) {
+                    return 1;
+                } else {
+                    return 4;
+                }
             }
         }
     }
