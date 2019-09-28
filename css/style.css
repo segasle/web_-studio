@@ -338,6 +338,9 @@ div:before {
   border: 2px solid #2561f2;
   color: #fff;
 }
+.form-control::placeholder {
+  color: #fff;
+}
 .btn {
   color: #fff;
   -webkit-transition: box-shadow 0.5s;
