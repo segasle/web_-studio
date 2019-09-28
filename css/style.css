@@ -361,6 +361,7 @@ div:before {
   box-shadow: 2px 2px 10px 2px black;
 }
 .bg-images {
+  background-image: url('/images/monitor-1307227.jpg');
   padding: 10px;
   -webkit-background-size: cover;
   background-size: cover;

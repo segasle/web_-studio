@@ -75,4 +75,4 @@
             </div>
         </div>
     </header>
-    <main class="content ndra-container">
+    <main class="content ndra-container bg-images">

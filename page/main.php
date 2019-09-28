@@ -1,4 +1,4 @@
-<div class="wrap bg-images" style="background-image: url('/images/monitor-1307227.jpg');">
+<div class="wrap">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6">
             <h1 class="text-center">У нас нет преград</h1>
