@@ -82,6 +82,9 @@ form{
 
   }
 }
+.bold{
+  font-weight: bold;
+}
 .b{
   &-flex{
     display: flex;
@@ -107,6 +110,19 @@ form{
       width: 100%;
       background: #000;
       opacity: 0.4;
+    }
+  }
+}
+.block{
+  background: @bg3;
+  padding: 15px;
+  border: 2px solid @bg2;
+  height: 400px;
+  &_head{
+    .head{
+      p{
+        padding: 15px;
+      }
     }
   }
 }

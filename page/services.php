@@ -4,7 +4,7 @@
         <div class="row">
             <?php
             $data = mysqli('SELECT * FROM `services`');
-            foreach ($data as $item){
+            foreach ($data as $item) {
                 ?>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                     <div class="block">

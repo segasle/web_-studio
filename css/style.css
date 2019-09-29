@@ -360,6 +360,9 @@ div:before {
   -o-box-shadow: 2px 2px 10px 2px black;
   box-shadow: 2px 2px 10px 2px black;
 }
+.bold {
+  font-weight: bold;
+}
 .b-flex {
   display: flex;
 }
@@ -383,6 +386,15 @@ div:before {
   width: 100%;
   background: #000;
   opacity: 0.4;
+}
+.block {
+  background: #3a126b;
+  padding: 15px;
+  border: 2px solid #2561f2;
+  height: 400px;
+}
+.block_head .head p {
+  padding: 15px;
 }
 .logo-link {
   background-image: url("/images/logo-light.png");
