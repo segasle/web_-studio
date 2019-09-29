@@ -360,6 +360,9 @@ div:before {
   -o-box-shadow: 2px 2px 10px 2px black;
   box-shadow: 2px 2px 10px 2px black;
 }
+.b-flex {
+  display: flex;
+}
 .bg-images {
   background-image: url('/images/monitor-1307227.jpg');
   z-index: 0;
