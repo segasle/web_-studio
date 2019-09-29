@@ -1,7 +1,4 @@
+<div class="wrap">
+    <h1 class="text-center">Мы можем делать</h1>
+</div>
 <?php
-/**
- * Created by PhpStorm.
- * User: sergejslepenkov
- * Date: 2019-09-29
- * Time: 13:40
- */
