@@ -362,6 +362,7 @@ div:before {
 }
 .bg-images {
   background-image: url('/images/monitor-1307227.jpg');
+  z-index: 0;
   padding: 10px;
   -webkit-background-size: cover;
   background-size: cover;
@@ -369,6 +370,7 @@ div:before {
   background-repeat: no-repeat;
 }
 .bg-images:before {
+  z-index: -1;
   min-height: 100%;
   content: '';
   display: block;
