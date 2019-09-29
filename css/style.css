@@ -388,6 +388,7 @@ div:before {
   opacity: 0.4;
 }
 .block {
+  margin-top: 15px;
   background: #3a126b;
   padding: 15px;
   border: 2px solid #2561f2;
