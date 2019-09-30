@@ -392,7 +392,6 @@ div:before {
   background: #3a126b;
   padding: 15px;
   border: 2px solid #2561f2;
-  height: 400px;
   -webkit-transition: box-shadow 0.7s;
   -moz-transition: box-shadow 0.7s;
   -o-transition: box-shadow 0.7s;
@@ -405,6 +404,10 @@ div:before {
 }
 .block_head .head p {
   padding: 15px;
+}
+.block_content ul {
+  margin: 15px;
+  padding: 0;
 }
 .logo-link {
   background-image: url("/images/logo-light.png");
