@@ -4,7 +4,19 @@
         <div class="row">
             <?php
             $data = mysqli('SELECT * FROM `services`');
-            foreach ($data as $item){
+            $mysql = mysqli('SELECT * FROM `services_description` JOIN `services` WHERE services.id = services_description.id_description ');
+            $des = '';
+            foreach ($mysql as $item) {
+                if ($item['id'] == $item['id_description']) {
+                    $des .= '<li>' . $item['description'] . '</li>';
+//
+//                    echo '<pre style="color: white;">';
+//                    print_r($item);
+//                    echo '</pre>';
+                }
+            }
+            $des .= '';
+            foreach ($data as $item) {
                 ?>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                     <div class="block">
@@ -14,7 +26,13 @@
                                 <p class="h4 bold"><?php echo $item['title']; ?></p>
                             </div>
                         </div>
-                        <div class="block_content"></div>
+                        <div class="block_content">
+                            <ul>
+                                <?php
+
+                                echo $des; ?>
+                            </ul>
+                        </div>
                         <div class="block_footer">
                             <a href="" class="btn btn-pink btn-block">Цены</a>
                         </div>
