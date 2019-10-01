@@ -405,6 +405,9 @@ div:before {
 .block_head .head p {
   padding: 15px;
 }
+.block_content {
+  min-height: 120px;
+}
 .block_content ul {
   margin: 15px;
   padding: 0;
