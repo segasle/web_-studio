@@ -38,7 +38,7 @@
             }
             ?>
         </div>
-        <h2 class="text-center">Не нашли для себя нужную услугу?</h2>
+        <h2 class="text-center margin-50">Не нашли для себя нужную услугу?</h2>
         <?php include 'template/form.php';?>
     </div>
 </div>

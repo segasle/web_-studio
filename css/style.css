@@ -423,6 +423,9 @@ div:before {
   height: 120px;
   display: inline-block;
 }
+.margin-50 {
+  margin: 50px 0;
+}
 .menu .navbar-light .active {
   border-bottom: 2px solid #f97f71;
 }
