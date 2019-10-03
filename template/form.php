@@ -26,7 +26,8 @@
 
     <?php
     $main = 'main';
-    if ($_GET['page'] === $main) { ?>
+    $page = $_GET['page'];
+    if ($page === $main or empty($page)) { ?>
         <div class="form-group">
             <label for="exampleInputPassword1" class="col-form-label-lg">Тема</label>
             <input type="text" class="form-control form-control-lg topic" id="exampleInputPassword1"
@@ -38,7 +39,7 @@
         <textarea class="form-control message form-control-lg" id="exampleFormControlTextarea1" name="message"
                   rows="3"></textarea>
     </div>
-    <?php if ($_GET['page'] === $main) { ?>
+    <?php if ($page === $main or empty($page)) { ?>
         <div class="form-group">
             <div id="ansFile"></div>
             <label for="exampleFormControlFile1" class="col-form-label-lg">Файл</label>
