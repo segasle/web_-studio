@@ -17,7 +17,7 @@
         </div>
         <div class="col-12 col-md-4 mb-3">
             <label for="validationServer02" class="col-form-label-lg">Email</label>
-            <input type="email" class="form-control form-control-lg email animation-bs" placeholder="sega@ya.ru"
+            <input type="email" class="form-control form-control-lg email border animation-bs" placeholder="sega@ya.ru"
                    name="email"
                    id="validationServer02">
             <div id="ansEmail"></div>
@@ -36,7 +36,8 @@
     <?php } ?>
     <div class="form-group">
         <label for="exampleFormControlTextarea1" class="col-form-label-lg">Сообщение</label>
-        <textarea class="form-control message form-control-lg animation-bs border" id="exampleFormControlTextarea1" name="message"
+        <textarea class="form-control message form-control-lg animation-bs border" id="exampleFormControlTextarea1"
+                  name="message"
                   rows="3"></textarea>
     </div>
     <?php if ($page === $main or empty($page)) { ?>
