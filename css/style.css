@@ -434,6 +434,12 @@ div:before {
 .margin-50 {
   margin: 50px 0;
 }
+.modal {
+  color: black;
+}
+.modal-backdrop {
+  z-index: -2;
+}
 .menu .navbar-light .active {
   border-bottom: 2px solid #f97f71;
 }

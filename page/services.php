@@ -9,6 +9,14 @@
             //$des .= '';
             foreach ($data as $item) {
                 $id = $item['id'];
+                $des = '';
+                $price = '';
+                foreach ($mysql as $items) {
+                    if ($id == $items['id_description']) {
+                        $des .= '<li>' . $items['description'] . '</li>';
+                        $price .= '<li>' . $items['description'] . '- от <i>' . $items['price'] . 'р</i></li>';
+                    }
+                }
                 ?>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
                     <div class="block border animation-bs">
@@ -20,13 +28,7 @@
                         </div>
                         <div class="block_content">
                             <ul>
-                                <?php
-                                foreach ($mysql as $items) {
-                                    if ($id == $items['id_description']) {
-                                        echo '<li>' . $items['description'] . '</li>';
-                                    }
-                                }
-                                ?>
+                                <?php echo $des; ?>
                             </ul>
                         </div>
                         <div class="block_footer">
@@ -41,13 +43,22 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <p class="modal-title h1"
+                                               id="exampleModalLabel"><?php echo $item['title']; ?></p>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            ...
+                                            <table class="table table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
+                                                <thead>
+                                                <tr>
+                                                    <th>Услуга</th>
+                                                    <th>Цена</th>
+                                                </tr>
+                                                </thead>
+                                                <?php echo $price; ?>
+                                            </table>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-pink" data-dismiss="modal">Закрыть
