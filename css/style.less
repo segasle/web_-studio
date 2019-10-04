@@ -66,11 +66,9 @@ form {
   &-control {
     color: @cr;
     background-color: transparent;
-    border: 2px solid @bg2;
 
     &:focus {
       background-color: transparent;
-      border: 2px solid @bg2;
       color: @cr;
     }
 
@@ -141,11 +139,19 @@ form {
   }
 }
 
+.border {
+  @br: 2px solid @bg2 !important;
+  border: @br;
+
+  &:focus {
+    border: @br;
+  }
+}
+
 .block {
   margin-top: 15px;
   background: @bg3;
   padding: 15px;
-  border: 2px solid @bg2;
   // height: 400px;
 
 

@@ -345,11 +345,9 @@ div:before {
 .form-control {
   color: #fff;
   background-color: transparent;
-  border: 2px solid #2561f2;
 }
 .form-control:focus {
   background-color: transparent;
-  border: 2px solid #2561f2;
   color: #fff;
 }
 .form-control::placeholder {
@@ -401,11 +399,16 @@ div:before {
   background: #000;
   opacity: 0.4;
 }
+.border {
+  border: 2px solid #2561f2 !important;
+}
+.border:focus {
+  border: 2px solid #2561f2 !important;
+}
 .block {
   margin-top: 15px;
   background: #3a126b;
   padding: 15px;
-  border: 2px solid #2561f2;
 }
 .block_head .head p {
   padding: 27px 25px;

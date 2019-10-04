@@ -11,7 +11,7 @@
                 $id = $item['id'];
                 ?>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4">
-                    <div class="block animation-bs">
+                    <div class="block border animation-bs">
                         <div class="block_head">
                             <div class="head b-flex">
                                 <i class="<?php echo $item['img']; ?> fa-4x"></i>
