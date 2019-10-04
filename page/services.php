@@ -14,7 +14,7 @@
                 foreach ($mysql as $items) {
                     if ($id == $items['id_description']) {
                         $des .= '<li>' . $items['description'] . '</li>';
-                        $price .= '<li>' . $items['description'] . '- от <i>' . $items['price'] . 'р</i></li>';
+                        $price .= '<tr><th>' . $items['description'] . '</th><th>от' . $items['price'] . 'р</th></tr>';
                     }
                 }
                 ?>
@@ -57,7 +57,10 @@
                                                     <th>Цена</th>
                                                 </tr>
                                                 </thead>
+                                                <tbody>
                                                 <?php echo $price; ?>
+                                                </tbody>
+
                                             </table>
                                         </div>
                                         <div class="modal-footer">
