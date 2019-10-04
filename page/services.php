@@ -15,7 +15,7 @@
                     if ($id == $items['id_description']) {
                         $des .= '<li>' . $items['description'] . '</li>';
                         $number = number_format($items['price'], 0, '', ' ');
-                        $price .= '<tr><th>' . $items['description'] . '</th><th>от ' . $number . ' руб</th></tr>';
+                        $price .= '<tr><th>' . $items['description'] . '</th><th>от ' . $number . ' р</th></tr>';
                     }
                 }
                 ?>
