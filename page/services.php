@@ -30,7 +30,32 @@
                             </ul>
                         </div>
                         <div class="block_footer">
-                            <a href="" class="btn btn-pink btn-block">Цены</a>
+                            <button type="button" class="btn btn-pink btn-block" data-toggle="modal"
+                                    data-target="#<?php echo $item['id_btn'] . $id; ?>">
+                                Узнать цену
+                            </button>
+
+                            <div class="modal fade" id="<?php echo $item['id_btn'] . $id; ?>" tabindex="-1"
+                                 role="dialog"
+                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            ...
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-pink" data-dismiss="modal">Закрыть
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -39,6 +64,6 @@
             ?>
         </div>
         <h2 class="text-center margin-50">Не нашли для себя нужную услугу?</h2>
-        <?php include 'template/form.php';?>
+        <?php include 'template/form.php'; ?>
     </div>
 </div>
