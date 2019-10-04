@@ -32,6 +32,23 @@ div {
   }
 }
 
+.animation {
+  &-bs {
+    @trans: box-shadow .7s;
+    -webkit-transition: @trans;
+    -moz-transition: @trans;
+    -o-transition: @trans;
+    transition: @trans;
+
+    &:hover, &:active, &:focus {
+      @br: 0px -1px 22px 2px @bg2;
+      -webkit-box-shadow: @br;
+      -moz-box-shadow: @br;
+      box-shadow: @br;
+    }
+  }
+}
+
 .wrapper {
   overflow-x: hidden;
 }
@@ -129,18 +146,8 @@ form {
   background: @bg3;
   padding: 15px;
   border: 2px solid @bg2;
- // height: 400px;
-  @trans: box-shadow .7s;
-  -webkit-transition: @trans;
-  -moz-transition: @trans;
-  -o-transition: @trans;
-  transition: @trans;
-  &:hover {
-    @br: 0px -1px 22px 2px @bg2;
-    -webkit-box-shadow: @br;
-    -moz-box-shadow: @br;
-    box-shadow: @br;
-  }
+  // height: 400px;
+
 
   &_head {
     .head {
@@ -149,9 +156,11 @@ form {
       }
     }
   }
-  &_content{
+
+  &_content {
     min-height: 180px;
-    ul{
+
+    ul {
       margin: 15px;
       padding: 0;
     }
@@ -173,11 +182,13 @@ form {
     display: inline-block;
   }
 }
-.margin{
-  &-50{
+
+.margin {
+  &-50 {
     margin: 50px 0;
   }
 }
+
 .menu {
   .navbar-light {
 
