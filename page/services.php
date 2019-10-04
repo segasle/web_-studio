@@ -14,7 +14,8 @@
                 foreach ($mysql as $items) {
                     if ($id == $items['id_description']) {
                         $des .= '<li>' . $items['description'] . '</li>';
-                        $price .= '<tr><th>' . $items['description'] . '</th><th>от ' . $items['price'] . 'р</th></tr>';
+                        $number = number_format($items['price'], 0, '', ' ');
+                        $price .= '<tr><th>' . $items['description'] . '</th><th>от ' . $number . ' руб</th></tr>';
                     }
                 }
                 ?>
