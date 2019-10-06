@@ -22,15 +22,20 @@
                 <button class="btn btn-pink btn-lg" name="submit" type="submit" id="ajaxBut">Отправить</button>
 
             </div>
-            <div class="col-12 col-md-6"></div>
-        </div>
+            <div class="col-12 col-md-6">
+                <?php
+                    $sql = mysqli('SELECT * FROM `comments`');
+                    if (mysqli_fetch_row($sql) > 0){
+                        foreach ($sql as $item){
+                ?>
 
+                            <?php
+                        }
+                    }else{
+                        echo '<p class="h2">нет отзывов</p>';
+                    }
+                ?>
+            </div>
+        </div>
     </div>
 </div>
-<?php
-/**
- * Created by PhpStorm.
- * User: sergejslepenkov
- * Date: 2019-09-29
- * Time: 13:42
- */
