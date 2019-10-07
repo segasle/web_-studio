@@ -28,7 +28,7 @@
             <div class="col-12 col-md-6">
 
                 <?php
-                $sql = mysqli('SELECT * FROM `comments` WHERE `publish`=1');
+                $sql = mysqli('SELECT * FROM `comments` WHERE `publish`= 1');
                 if (mysqli_fetch_row($sql) > 0) { ?>
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -39,7 +39,8 @@
                         <div class="carousel-inner">
                             <?php
                             foreach ($sql as $item) {
-                                if ($item = $item[0]){
+                                //print_r($item);
+                                if ($item['id'] = 1){
                                     $active = 'active';
                                 }else{
                                     $active = '';
