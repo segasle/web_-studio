@@ -36,10 +36,17 @@
                         <div class="carousel-inner">
                             <?php
                             foreach ($sql as $item) {
+                                if ($item = $item[0]){
+                                    $active = 'active';
+                                }else{
+                                    $active = '';
+                                }
                                 ?>
 
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="..." alt="Первый слайд">
+                                <div class="carousel-item <?php echo $active; ?>">
+                                    <div class="block border">
+                                        <div class="block_head"></div>
+                                    </div>
                                 </div>
                                 <?php
                             } ?>
