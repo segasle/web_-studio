@@ -4,12 +4,14 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <p class="h2">Оставьте отзыв</p>
-                <form action="" method="post">
+                <div id="ajaxAnsw"></div>
+                <form method="post" class="comment-form">
                     <div class="form-group">
                         <label for="validationServer01" class="col-form-label-lg">Имя</label>
                         <input type="text" class="form-control-lg form-control name animation-bs border"
                                id="validationServer01"
                                placeholder="Имя" name="name">
+                        <div id="ansName"></div>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1" class="col-form-label-lg">Сообщение</label>
@@ -17,15 +19,16 @@
                                   id="exampleFormControlTextarea1"
                                   name="message"
                                   rows="3"></textarea>
+                        <div id="ansMessage"></div>
                     </div>
                 </form>
-                <button class="btn btn-pink btn-lg" name="submit" type="submit" id="ajaxBut">Отправить</button>
-
+                <button class="btn btn-pink btn-lg" name="submit" type="submit" id="ajaxComm">Отправить</button>
             </div>
+
             <div class="col-12 col-md-6">
 
                 <?php
-                $sql = mysqli('SELECT * FROM `comments`');
+                $sql = mysqli('SELECT * FROM `comments` WHERE `publish`=1');
                 if (mysqli_fetch_row($sql) > 0) { ?>
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -45,7 +48,18 @@
 
                                 <div class="carousel-item <?php echo $active; ?>">
                                     <div class="block border">
-                                        <div class="block_head"></div>
+                                        <div class="block_head">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p><i class="fas fa-user-circle"></i><?php echo $item['name']; ?></p>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="pull-right">
+                                                        <p><i class="fas fa-clock"></i><?php echo $item['date']; ?></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <?php
