@@ -32,7 +32,7 @@
                     <li class="btn-pink bold btn-lg">ПН</li>
                     <li class="btn-pink bold btn-lg">ВТ</li>
                     <li class="btn-pink bold btn-lg">СР</li>
-                    <li class="btn-pink bold btn-lg">ЧР</li>
+                    <li class="btn-pink bold btn-lg">ЧТ</li>
                     <li class="btn-pink bold btn-lg">ПТ</li>
                     <li class="btn-pink bold btn-lg">СБ</li>
                     <li class="btn-pink bold btn-lg">ВС</li>
