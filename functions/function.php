@@ -15,13 +15,16 @@ function connecting()
     } else {
         $file = $_GET['page'];
     }
-//    echo '<pre>';
-//    print_r($_SERVER);
-//    echo '</pre>';
-
-    include 'template/header.php';
-    include 'page/' . $file . '.php';
-    include 'template/footer.php';
+    //    echo '<pre>';
+    //    print_r($_SERVER);
+    //    echo '</pre>';
+    if($file <> 'admcomm') {
+        include 'template/header.php';
+        include 'page/' . $file . '.php';
+        include 'template/footer.php';
+    } else {
+        include 'page/'.$file.'.php';
+    }
 }
 
 function mysqli($query)
@@ -107,11 +110,6 @@ function feedback()
 
 function ajax_form($form_data)
 {
-    /*if($_FILES['file']['size'] > 0) {
-        return 100;
-    } else {
-        return 200;
-    }*/
     // КОДЫ ОШИБОК ДЛЯ AJAX
     // 0 - неизвестная ошибка
     // 1 - все ОК
@@ -186,6 +184,82 @@ function ajax_form($form_data)
                     return 4;
                 }
             }
+        }
+    }
+    return 0;
+}
+
+function ajax_comm($comm_data) {
+    // КОДЫ ОШИБОК ДЛЯ AJAX
+    // 0 - неизвестная ошибка
+    // 1 - все ОК
+    // 2 - не введено имя
+    // 3 - не введено сообщение
+    // 4 - ошибка записи в БД
+    // 23 - имя и сообщение
+    $data = $comm_data;
+    $name = trim($data['name']);
+    $mess = $data['message'];
+    if (!preg_match("/^[a-zA-Zа-яА-Я]+$/ui", $name)) {
+        if (empty($data['message'])) {
+            return 23;
+        } else {
+            return 2;
+        }
+    } else {
+        if (empty($data['message'])) {
+            return 3;
+        } else {
+            $res = mysqli("INSERT INTO `comments` (`name`, `text`) VALUES ('{$name}', '{$mess}')");
+            if ($res) {
+                $to = 'segasle@ya.ru';
+                $subject = 'новый отзыв';
+                $message = "Новый отзыв на сайте";
+                $headers = 'From: segasle@kafe-lyi.ru' . "\r\n" .
+                            "Content-Type: text/html; charset=\"UTF-8\"\r\n".
+                            'X-Mailer: PHP/' . phpversion();
+                $mail = mail("$to", "$subject", "$message", "$headers");
+                return 1;
+            } else {
+                return 4;
+            }
+        }
+    }
+    return 0;
+}
+
+function exchFunc($exch_data) {
+    // КОДЫ ОШИБОК ДЛЯ AJAX
+    // 0 - неизвестная ошибка
+    // 1 - все ОК - публикация (1)
+    // 2 - все ОК - публикация (0)
+    // 3 - не ОК - публикация
+    // 4 - все ОК - удаление
+    // 5 - не ОК - удаление
+    $data = $exch_data;
+    $id = $data["id"];
+    if ($data["type"] == 1) {
+        if($data["pub"] == 0) {
+            $pub = 1;
+        } else {
+            $pub = 0;
+        };
+        $sql = mysqli("UPDATE `comments` SET `publish`='{$pub}' WHERE `id`='{$id}' ");
+        if($sql) {
+            if($pub == 1) {
+                return 1;
+            } else {
+                return 2;
+            }
+        } else {
+            return 3;
+        }
+    } else if ($data["type"] == 0) {
+        $sql = mysqli("DELETE FROM `comments` WHERE `id`='{$id}' ");
+        if($sql) {
+            return 4;
+        } else {
+            return 5;
         }
     }
     return 0;
