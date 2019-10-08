@@ -30,23 +30,21 @@
                 <?php
                 $sql = mysqli('SELECT * FROM `comments` WHERE `publish`= 1');
                 if (mysqli_fetch_row($sql) > 0) { ?>
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="8000" data-keyboard="true" data-wrap="true">
                         <div class="carousel-inner">
                             <?php
                             foreach ($sql as $item) {
-                                //print_r($item);
-                                if ($item['id'] = 1){
+//                                echo '<pre style="color: white;">';
+//                                print_r($item);
+//                                echo '</pre>';
+
+                                if ($item['mac'] == 'active'){
                                     $active = 'active';
                                 }else{
                                     $active = '';
                                 }
+                                $date = new DateTime($item['date']);
                                 ?>
-
                                 <div class="carousel-item <?php echo $active; ?>">
                                     <div class="block border">
                                         <div class="block_head">
@@ -56,7 +54,7 @@
                                                 </div>
                                                 <div class="col">
                                                     <div class="float-right">
-                                                        <p><i class="fas fa-clock fa-2x"></i><i class="head-text boldt"><?php echo $item['date']; ?></i></p>
+                                                        <p><i class="fas fa-clock fa-2x"></i><i class="head-text boldt"><?php echo $date->format('d.m.Y H:i:s'); ?></i></p>
                                                     </div>
                                                 </div>
                                             </div>
