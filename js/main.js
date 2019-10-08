@@ -114,4 +114,54 @@ $(function() {
             }
         });
     });
+
+    $('#ajaxComm').click(function (e) {
+        e.preventDefault();
+        $('.name').removeClass('is-valid').removeClass('is-invalid');
+        $('.message').removeClass('is-valid').removeClass('is-invalid');
+        $('.email').removeClass('is-valid').removeClass('is-invalid');
+        $('#ansName').html('');
+        $('#ansMessage').html('');
+        $('#ajaxAnsw').html('');
+        var formElement = document.getElementsByClassName("comment-form");
+        var formData = new FormData(formElement[0]);
+        $.ajax({
+            type: "POST",
+            url: "/functions/sendcomm.php",
+            data: formData,
+            dataType: 'json',
+            contentType: false,
+            cache: false,
+            processData:false,
+            success: function (data) {
+                if (data == 0 || data == 4) {
+                    $('#ajaxAnsw').html('<div class="alert alert-danger">Ошибка отправки формы</div>');
+                    $('.name').addClass('is-invalid');
+                    $('.message').addClass('is-invalid');
+                } else if (data == 1) {
+                    $('#ajaxAnsw').html('<div class="alert alert-success">Успешно отправлено! Ваш отзыв будет опубликован после прохожднеия модерации.</div>');
+                    $('.name').addClass('is-valid');
+                    $('.message').addClass('is-valid');
+                } else if (data == 2) {
+                    $('.name').addClass('is-invalid');
+                    $('#ansName').html('<div class="d-block invalid-feedback">Введите имя</div>');
+                    $('.message').addClass('is-valid');
+                } else if(data == 23) {
+                    $('.name').addClass('is-invalid');
+                    $('#ansName').html('<div class="d-block invalid-feedback">Введите имя</div>');
+                    $('.message').addClass('is-invalid');
+                    $('#ansMessage').html('<div class="d-block invalid-feedback">Введите сообщение</div>');
+                } else if (data == 3) {
+                    $('.name').addClass('is-valid');
+                    $('.message').addClass('is-invalid');
+                    $('#ansMessage').html('<div class="d-block invalid-feedback">Введите сообщение</div>');
+                } else {
+                    $('#ajaxAnsw').html('<div class="alert alert-danger">Ошибка отправки формы</div>');
+                }
+            },
+            error: function (error, exception) {
+                $('#ajaxAnsw').html(error.responseText);
+            }
+        });
+    });
 });
