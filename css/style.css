@@ -413,10 +413,16 @@ div:before {
 .block_head .head p {
   padding: 27px 25px;
 }
-.block_content {
+.block_head .head-text {
+  margin-left: 10px;
+}
+.block_container .text {
+  margin: 1rem;
+}
+.block_container_content {
   min-height: 180px;
 }
-.block_content ul {
+.block_container ul {
   margin: 15px;
   padding: 0;
 }

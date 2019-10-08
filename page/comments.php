@@ -1,7 +1,7 @@
 <div class="wrap">
     <div class="container-fluid">
         <h1 class="text-center">Наши отзывы</h1>
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-12 col-md-6">
                 <p class="h2">Оставьте отзыв</p>
                 <div id="ajaxAnsw"></div>
@@ -52,13 +52,18 @@
                                         <div class="block_head">
                                             <div class="row">
                                                 <div class="col">
-                                                    <p><i class="fas fa-user-circle"></i><?php echo $item['name']; ?></p>
+                                                    <p><i class="fas fa-user-circle fa-2x"></i><i class="head-text"><?php echo $item['name']; ?></i></p>
                                                 </div>
                                                 <div class="col">
-                                                    <div class="pull-right">
-                                                        <p><i class="fas fa-clock"></i><?php echo $item['date']; ?></p>
+                                                    <div class="float-right">
+                                                        <p><i class="fas fa-clock fa-2x"></i><i class="head-text boldt"><?php echo $item['date']; ?></i></p>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="block_container border-top border-bottom">
+                                            <div class="content">
+                                                <p class="text"><?php echo $item['text']; ?></p>
                                             </div>
                                         </div>
                                     </div>
