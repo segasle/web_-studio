@@ -488,7 +488,7 @@ div:before {
   .justify-content-flex-end {
     justify-content: flex-end;
   }
-  .align-items-center {
+  header .align-items-center {
     align-items: inherit !important;
   }
 }
@@ -507,7 +507,7 @@ div:before {
   }
 }
 @media (max-width: 1200px) {
-  .header .btn {
+  .btn {
     margin: 10px 0;
   }
 }
