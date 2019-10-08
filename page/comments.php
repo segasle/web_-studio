@@ -54,7 +54,7 @@
                                                 </div>
                                                 <div class="col">
                                                     <div class="float-right">
-                                                        <p><i class="fas fa-clock fa-2x"></i><i class="head-text boldt"><?php echo $date->format('d.m.Y H:i:s'); ?></i></p>
+                                                        <p><i class="fas fa-clock fa-2x"></i><b class="head-text bold"><?php echo $date->format('d.m.Y H:i:s'); ?></b></p>
                                                     </div>
                                                 </div>
                                             </div>
