@@ -1,3 +1,10 @@
+
+<?php
+$sql = mysqli('SELECT * FROM `contacts`');
+$array = mysqli_fetch_array($sql);
+//print_r($array);
+
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -52,20 +59,20 @@
                 <div class="info">
                     <div class="row align-items-center">
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5">
-                            <a href="https://api.whatsapp.com/send?phone=79153301314"
+                            <a href="https://api.whatsapp.com/send?phone=<?php echo $array['phone']; ?>"
                                class="btn btn-md btn-pink btn-block"
                                target="_blank">
                                 <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Написать в WhatsÂpp</span>
                             </a>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                            <a href="viber://chat?number=79153301314" class="btn btn-md btn-pink btn-block"
+                            <a href="viber://chat?number=<?php echo $array['phone']; ?>" class="btn btn-md btn-pink btn-block"
                                target="_blank">
                                 <i class="fab fa-viber"></i><span>Написать в Viber</span>
                             </a>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3">
-                            <a href="mailto:segasle@ya.ru" class="btn btn-md btn-pink btn-block"
+                            <a href="mailto:<?php echo $array['email']; ?>" class="btn btn-md btn-pink btn-block"
                                target="_blank">
                                 <i class="fas fa-envelope"></i><span>Написать на почту</span>
                             </a>

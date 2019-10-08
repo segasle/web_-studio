@@ -463,6 +463,14 @@ div:before {
   top: 100%;
   z-index: 10;
 }
+.content ul {
+  padding: 0;
+  list-style: none;
+}
+.content ul li {
+  margin: 10px 0;
+  width: 60px;
+}
 .footer {
   background: #3a126b;
   padding: 10px;
