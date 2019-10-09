@@ -28,7 +28,7 @@
         <p class="h3 bold" style="margin-top: 20px;">Время работы</p>
         <div class="row align-items-center">
             <div class="col-3 col-sm-2">
-                <ul>
+                <ul class="ul">
                     <li class="btn-pink bold btn-lg">ПН</li>
                     <li class="btn-pink bold btn-lg">ВТ</li>
                     <li class="btn-pink bold btn-lg">СР</li>
