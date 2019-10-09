@@ -60,12 +60,13 @@ $(function() {
                     $('.topic').addClass('is-invalid');
                     $('.message').addClass('is-invalid');
                 } else if (data == 1) {
-                    $('#ajaxAnsw').html('<div class="alert alert-success">Успешно отправлено</div>');
-                    $('.name').addClass('is-valid');
-                    $('.phone-number').addClass('is-valid');
-                    $('.email').addClass('is-valid');
-                    $('.topic').addClass('is-valid');
-                    $('.message').addClass('is-valid');
+                    $('#ajaxAnsw').html('<div class="alert alert-success">Успешно отправлено</div>').delay(3200).fadeOut(300);
+                    $('.name').val('');
+                    $('.phone-number').val('');
+                    $('.email').val('');
+                    $('.topic').val('');
+                    $('.message').val('');
+                    $('.form-control-file').val('');
                 } else if (data == 2) {
                     $('.name').addClass('is-invalid');
                     $('#ansName').html('<div class="d-block invalid-feedback">Введите имя</div>');
@@ -139,9 +140,9 @@ $(function() {
                     $('.name').addClass('is-invalid');
                     $('.message').addClass('is-invalid');
                 } else if (data == 1) {
-                    $('#ajaxAnsw').html('<div class="alert alert-success">Успешно отправлено! Ваш отзыв будет опубликован после прохожднеия модерации.</div>');
-                    $('.name').addClass('is-valid');
-                    $('.message').addClass('is-valid');
+                    $('#ajaxAnsw').html('<div class="alert alert-success">Успешно отправлено! Ваш отзыв будет опубликован после прохожднеия модерации.</div>').delay(3200).fadeOut(300);
+                    $('.name').val('');
+                    $('.message').val('');
                 } else if (data == 2) {
                     $('.name').addClass('is-invalid');
                     $('#ansName').html('<div class="d-block invalid-feedback">Введите имя</div>');
