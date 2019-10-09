@@ -27,7 +27,8 @@
                     foreach ($mysql as $item) {
                         ?>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                            <a href="<?php echo $item['link']; ?>" target="_blank" class="card border animation-bs text-white">
+                            <a href="<?php echo $item['link']; ?>" target="_blank"
+                               class="card border animation-bs text-white">
                                 <img class="card-img" src="<?php echo $item['images']; ?>" alt="Card image">
                                 <div class="card-img-overlay">
                                     <h5 class="h3 card-title text-center bold"><?php echo $item['title_portfolio']; ?></h5>
