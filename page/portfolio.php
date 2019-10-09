@@ -22,21 +22,26 @@
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-8 col-lg-10">
-                <div class="row">
+                <div class="row tab-content" id="v-pills-tabContent">
                     <?php
                     foreach ($mysql as $item) {
-                        ?>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                            <a href="<?php echo $item['link']; ?>" target="_blank" id="v-pills-home" role="tabpanel"
-                               aria-labelledby="v-pills-home-tab"
-                               class="card border animation-bs text-white">
-                                <img class="card-img" src="<?php echo $item['images']; ?>" alt="Card image">
-                                <div class="card-img-overlay">
-                                    <h5 class="h3 card-title text-center bold"><?php echo $item['title_portfolio']; ?></h5>
-                                </div>
-                            </a>
-                        </div>
-                        <?php
+                        $id = $item['id'];
+                        if ($id == $item['id_id_services']) {
+
+                            ?>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                <a href="<?php echo $item['link']; ?>" target="_blank" id="btn-<?php echo $id; ?>"
+                                   role="tabpanel"
+                                   aria-labelledby="btn-<?php echo $id; ?>-tab"
+                                   class="card border animation-bs text-white tab-pane show fade <?php echo $item['active']; ?>">
+                                    <img class="card-img" src="<?php echo $item['images']; ?>" alt="Card image">
+                                    <div class="card-img-overlay">
+                                        <h5 class="h3 card-title text-center bold"><?php echo $item['title_portfolio']; ?></h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <?php
+                        }
                     }
                     ?>
                 </div>
