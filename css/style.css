@@ -463,6 +463,17 @@ div:before {
   top: 100%;
   z-index: 10;
 }
+.card {
+  background-color: transparent;
+}
+.card:before {
+  content: '';
+  position: absolute;
+  opacity: 0.3;
+  background: black;
+  width: 100%;
+  min-height: 100%;
+}
 .content .ul {
   padding: 0;
   list-style: none;

@@ -2,10 +2,12 @@
     <h1 class="text-center">Наши разработки</h1>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-4 col-lg-2 col-xl-1">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-2">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <?php
                     $data = mysqli('SELECT * FROM `services`');
+                    $mysql = mysqli('SELECT * FROM `portfolio` JOIN `services` WHERE services.id = portfolio.id_id_services');
+
                     foreach ($data as $item) {
                         $id = $item['id'];
                         ?>
@@ -19,11 +21,22 @@
 
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-8 col-lg-10 col-xl-11">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-10">
                 <div class="row">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-
-                    </div>
+                    <?php
+                    foreach ($mysql as $item) {
+                        ?>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                            <a href="<?php echo $item['link']; ?>" target="_blank" class="card border animation-bs text-white">
+                                <img class="card-img" src="<?php echo $item['images']; ?>" alt="Card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="h3 card-title text-center bold"><?php echo $item['title_portfolio']; ?></h5>
+                                </div>
+                            </a>
+                        </div>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
