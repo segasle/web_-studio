@@ -27,7 +27,8 @@
                     foreach ($mysql as $item) {
                         ?>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                            <a href="<?php echo $item['link']; ?>" target="_blank"
+                            <a href="<?php echo $item['link']; ?>" target="_blank" id="v-pills-home" role="tabpanel"
+                               aria-labelledby="v-pills-home-tab"
                                class="card border animation-bs text-white">
                                 <img class="card-img" src="<?php echo $item['images']; ?>" alt="Card image">
                                 <div class="card-img-overlay">
