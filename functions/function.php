@@ -144,6 +144,12 @@ function ajax_form($form_data)
             } else {
                 $message = $data['message'];
             }
+            $nam  = 'Имя '. $name.'<br>';
+            $phon  = 'Телефон '. $phone.'<br>';
+            $mai  = 'Почта '. $email.'<br>';
+            $top  = 'Тема '. $topic.'<br>';
+            $text  = 'Соббщение '. $message.'<br>';
+            $mess = $nam.$phon.$mai.$top.$text;
             if ($_FILES['file']['size'] > 0) {
                 $update = $_SERVER['DOCUMENT_ROOT'] . '/download/';
                 $file = $_FILES['file']['name'];
@@ -179,9 +185,19 @@ function ajax_form($form_data)
             } else {
                 $res = mysqli("INSERT INTO `feedback`(`name`, `phone`, `email`, `topic`, `message`) VALUES ('{$name}','{$phone}','{$email}','{$topic}','{$message}')");
                 if ($res) {
-                    return 1;
-                } else {
-                    return 4;
+                    $to = 'segasle@yandex.ru';
+                    $subject = 'обратная связь';
+                    $message = "$mess";
+                    $headers = 'From: segasle@kafe-lyi.ru' . "\r\n" .
+                        'Reply-To: segasle@kafe-lyi.ru' . "\r\n" .
+                        "Content-Type: text/html; charset=\"UTF-8\"\r\n"
+                        . 'X-Mailer: PHP/' . phpversion();
+                    $mail = mail("$to", "$subject", "$message", "$headers");
+                    if ($mail){
+                        return 1;
+                    } else {
+                        return 4;
+                    }
                 }
             }
         }

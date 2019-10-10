@@ -24,23 +24,25 @@
             <div class="col-12 col-sm-12 col-md-8 col-lg-10">
                 <div class="row tab-content" id="v-pills-tabContent">
                     <?php
-                    foreach ($mysql as $item) {
-                        $id = $item['id'];
-                        if ($id == $item['id_id_services']) {
+                    foreach ($data as $items) {
+                        foreach ($mysql as $item) {
+                            $id = $items['id'];
+                            if ($id == $item['id_id_services']) {
 
-                            ?>
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                                <a href="<?php echo $item['link']; ?>" target="_blank" id="btn-<?php echo $id; ?>"
-                                   role="tabpanel"
-                                   aria-labelledby="btn-<?php echo $id; ?>-tab"
-                                   class="card border animation-bs text-white tab-pane show fade <?php echo $item['active']; ?>">
-                                    <img class="card-img" src="<?php echo $item['images']; ?>" alt="Card image">
-                                    <div class="card-img-overlay">
-                                        <h5 class="h3 card-title text-center bold"><?php echo $item['title_portfolio']; ?></h5>
-                                    </div>
-                                </a>
-                            </div>
-                            <?php
+                                ?>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                    <a href="<?php echo $item['link']; ?>" target="_blank" id="btn-<?php echo $id; ?>"
+                                       role="tabpanel"
+                                       aria-labelledby="btn-<?php echo $id; ?>-tab"
+                                       class="card border animation-bs text-white tab-pane show fade <?php echo $item['active']; ?>">
+                                        <img class="card-img" src="<?php echo $item['images']; ?>" alt="Card image">
+                                        <div class="card-img-overlay">
+                                            <h5 class="h3 card-title text-center bold"><?php echo $item['title_portfolio']; ?></h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <?php
+                            }
                         }
                     }
                     ?>
