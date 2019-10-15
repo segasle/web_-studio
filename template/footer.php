@@ -1,7 +1,7 @@
 </main>
 <footer>
     <div class="footer">
-        <p>Все права защещины &copy;2019  - <?php echo date("Y")?> </p>
+        <p>Все права защищены &copy;2019  - <?php echo date("Y")?> </p>
     </div>
 </footer>
 </div>

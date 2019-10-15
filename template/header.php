@@ -11,9 +11,21 @@ $array = mysqli_fetch_array($sql);
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="yandex-verification" content="1c6a867e3ab20f34" />
-    <title>Title</title>
+    <meta name="yandex-verification" content="de0f9966b07d3d59" />
+    <meta name="google-site-verification" content="bnlmtmDEKJwJIN9Ls7w0TO7_5QwOhk1JgBzrHPRVSp0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Веб студия - webpro">
+    <meta property="og:description" content="ru_RU">
+    <meta property="og:site_name" content="Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords"
+          content="веб студия Истра, веб студия pro, веб студия">
+    <meta name="description" content="Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.">
+    <title>Веб студия</title>
 
+    
     <link rel="icon" href="/images/logo-light.png" type="image/png" sizes="<16>X<16>">
     <link rel="stylesheet" href="/icons/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
