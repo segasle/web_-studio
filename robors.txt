@@ -1,0 +1,2 @@
+User-agent: Yandex
+Disallow: /page/admcomm.php
