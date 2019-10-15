@@ -1,0 +1,3 @@
+User-agent: Yandex
+Disallow: /page/admcomm.php
+Sitemap: https://s-webpro.ru/sitemap.xml
