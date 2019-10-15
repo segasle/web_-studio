@@ -1,3 +1,4 @@
 User-agent: Yandex
+User-agent: Googlebot
 Disallow: /page/admcomm.php
 Sitemap: https://s-webpro.ru/sitemap.xml
