@@ -21,9 +21,9 @@ $array = mysqli_fetch_array($sql);
     <meta property="og:site_name" content="Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.">
     <meta name="robots" content="index, follow">
     <meta name="keywords"
-          content="веб студия Истра, веб студия pro, веб студия">
+          content="веб студия Истра, веб студия pro, веб студия, Заказать сайт, фриланс">
     <meta name="description" content="Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.">
-    <title>Веб студия</title>
+    <title>Веб студия WEBPRO</title>
 
 
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
