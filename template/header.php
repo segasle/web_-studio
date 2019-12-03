@@ -56,7 +56,7 @@ $array = mysqli_fetch_array($sql);
                     <a href="/" class="logo-link"></a>
                 </div>
             </div>
-            <div class="col-7 col-sm-6 col-md-2 col-lg-8 col-xl-6 order-xs-1">
+            <div class="col-7 col-sm-6 col-md-2 col-lg-10 col-xl-6 order-xs-1">
                 <div class="menu">
                     <nav class="navbar navbar-expand-lg navbar-light justify-content-flex-end">
                         <input type="checkbox" id="checkbox" class="d-none">
@@ -83,23 +83,23 @@ $array = mysqli_fetch_array($sql);
                     </nav>
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-8 col-lg-2 col-xl-5 order-xs-3">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-12 col-xl-5 order-xs-3">
                 <div class="info">
                     <div class="row align-items-center">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-12 col-xl-5">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-5">
                             <a href="https://api.whatsapp.com/send?phone=<?php echo $array['phone']; ?>"
                                class="btn btn-md btn-pink btn-block"
                                target="_blank">
                                 <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Написать в WhatsÂpp</span>
                             </a>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-12 col-xl-4">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                             <a href="viber://chat?number=<?php echo $array['phone']; ?>" class="btn btn-md btn-pink btn-block"
                                target="_blank">
                                 <i class="fab fa-viber"></i><span>Написать в Viber</span>
                             </a>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-12 col-xl-3">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4  col-xl-3">
                             <a href="mailto:<?php echo $array['email']; ?>" class="btn btn-md btn-pink btn-block"
                                target="_blank">
                                 <i class="fas fa-envelope"></i><span>Написать на почту</span>
