@@ -31,6 +31,7 @@ div {
     clear: both;
   }
 }
+
 .animation {
   &-bs {
     @trans: box-shadow .7s;
@@ -246,9 +247,11 @@ form {
     }
   }
 }
-.card{
+
+.card {
   background-color: transparent;
-  &:before{
+
+  &:before {
     content: '';
     position: absolute;
     opacity: .3;
@@ -257,12 +260,14 @@ form {
     min-height: 100%;
   }
 }
+
 .content {
 
-  .ul{
+  .ul {
     padding: 0;
     list-style: none;
-    li{
+
+    li {
       margin: 10px 0;
       width: 60px;
     }
@@ -304,7 +309,8 @@ form {
       }
     }
   }
-  header{
+
+  header {
 
     .align {
       &-items {
@@ -351,8 +357,21 @@ form {
 
 @media (max-width: 1200px) {
   //.header {
-    .btn {
-      margin: 10px 0;
-    }
+  .btn {
+    margin: 10px 0;
+  }
+
   //}
+}
+
+@media (min-width: 2000px) {
+  .col {
+    &-xll {
+      &-2 {
+
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+      }
+    }
+  }
 }
