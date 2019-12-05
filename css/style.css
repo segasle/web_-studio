@@ -522,4 +522,10 @@ div:before {
     margin: 10px 0;
   }
 }
+@media (min-width: 2000px) {
+  .col-xll-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
