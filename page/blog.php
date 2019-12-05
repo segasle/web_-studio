@@ -4,8 +4,8 @@
     $data = mysqli('SELECT * FROM `thumbnails`');
     foreach ($data as $item) {
         ?>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <div class="card">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xll-2">
+            <div class="card before">
                 <img src="/images/thumbnails/<?php echo $item['photo'];?>" class="card-img-top" alt="<?php echo $item['head'];?>">
                 <div class="card-body">
                     <h5 class="card-title h3"><?php echo $item['head'];?></h5>

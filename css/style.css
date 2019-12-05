@@ -474,6 +474,18 @@ div:before {
   width: 100%;
   min-height: 100%;
 }
+.card.before:before {
+  z-index: -1;
+}
+.card-text {
+  overflow-y: hidden;
+  height: 180px;
+  cursor: pointer;
+}
+.card-text:hover {
+  height: auto;
+  overflow-y: auto;
+}
 .content .ul {
   padding: 0;
   list-style: none;

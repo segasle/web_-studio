@@ -258,6 +258,21 @@ form {
     background: black;
     width: 100%;
     min-height: 100%;
+   }
+  &.before {
+    &:before {
+      z-index: -1;
+     }
+  }
+  &-text {
+
+    overflow-y: hidden;
+    height: 180px;
+    cursor: pointer;
+    &:hover {
+      height: auto;
+      overflow-y: auto;
+    }
   }
 }
 
