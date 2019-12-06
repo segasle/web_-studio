@@ -285,8 +285,11 @@ function postarticles() {
     $sq = basename($_SERVER['REQUEST_URI']);
     $sql = mysqli("SELECT * FROM `thumbnails` WHERE `link`='{$sq}' ");
     foreach ($sql as $item){
-        echo "<div class=\"container\">".$item['text']."
+        if ($item['link'] == $sq){
+
+            echo "<div class=\"container\">".$item['text']."
 </div>";
+        }
     }
 //    return $out;
 
