@@ -3,7 +3,7 @@
 $sql = mysqli('SELECT * FROM `contacts`');
 $array = mysqli_fetch_array($sql);
 //print_r($array);
-
+require 'functions/meta.php';
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -18,12 +18,12 @@ $array = mysqli_fetch_array($sql);
     <meta property="og:type" content="article">
     <meta property="og:title" content="Веб студия - webpro">
     <meta property="og:description" content="ru_RU">
-    <meta property="og:site_name" content="Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.">
+    <meta property="og:site_name" content="<?php echo $description;?>">
     <meta name="robots" content="index, follow">
     <meta name="keywords"
-          content="веб студия Истра, веб студия pro, веб студия, Заказать сайт, фриланс">
-    <meta name="description" content="Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.">
-    <title>Веб студия WEBPRO</title>
+          content="<?php echo $keywords;?>">
+    <meta name="description" content="<?php echo $description;?>">
+    <title>Веб студия WEBPRO <?php echo $title;?></title>
 
 
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
