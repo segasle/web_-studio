@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <h5 class="card-title h3"><?php echo $item['head'];?></h5>
                     <p class="card-text text-justify"><?php echo $item['descriptions'];?></p>
-                    <a href="?page=<?php echo $item['link'];?>" class="btn btn-md btn-pink btn-block">
+                    <a href="<?php echo $item['link'];?>" class="btn btn-md btn-pink btn-block">
                         <small class="">Подробнее</small>
                     </a>
                 </div>

@@ -282,7 +282,8 @@ function exchFunc($exch_data) {
 }
 
 function postarticles() {
-    $sql = mysqli("SELECT * FROM `thumbnails` WHERE `link`='{$_GET['page']}' ");
+    $sq = basename($_SERVER['REQUEST_URI']);
+    $sql = mysqli("SELECT * FROM `thumbnails` WHERE `link`='{$sq}' ");
     foreach ($sql as $item){
         echo "<div class=\"container\">".$item['text']."
 </div>";
