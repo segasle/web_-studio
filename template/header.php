@@ -21,7 +21,7 @@ require 'functions/meta.php';
     <meta property="og:site_name" content="<?php echo $description;?>">
     <meta name="robots" content="index, follow">
     <meta name="keywords"
-          content="<?php echo $keywords;?>">
+          content="webpro - разработка сайтов <?php echo $keywords;?>">
     <meta name="description" content="<?php echo $description;?>">
     <title>Веб студия WEBPRO <?php echo $title;?></title>
 

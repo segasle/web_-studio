@@ -16,5 +16,10 @@ foreach ($res as $item) {
         $title = $item['head'];
         $keywords = $item['head'];
         $description = $item['descriptions'];
+    }else{
+
+        $title = '';
+        $keywords = '';
+        $description = 'Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.';
     }
 }
