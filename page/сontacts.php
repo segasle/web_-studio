@@ -1,7 +1,7 @@
 <div class="wrap">
     <h1 class="text-center">Контакты</h1>
     <div class="container">
-        <p class="h3 bold">Руководитель</p>
+        <p class="h3 bold">Директор</p>
         <?php
             $sql = mysqli('SELECT * FROM `contacts`');
             $array = mysqli_fetch_array($sql);

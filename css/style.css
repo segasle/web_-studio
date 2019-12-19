@@ -539,5 +539,9 @@ div:before {
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
   }
+  .col-xll-3 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
