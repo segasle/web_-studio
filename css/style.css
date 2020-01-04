@@ -540,8 +540,8 @@ div:before {
     max-width: 16.666667%;
   }
   .col-xll-3 {
-    flex: 0 0 16.666667%;
-    max-width: 16.666667%;
+    flex: 0 0 25%;
+    max-width: 25%;
   }
 }
 /*# sourceMappingURL=style.css.map */

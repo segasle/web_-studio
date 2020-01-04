@@ -1,6 +1,6 @@
 <div class="wrap">
     <h1 class="text-center">Мы можем делать</h1>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <?php
             $data = mysqli('SELECT * FROM `services`');
@@ -19,7 +19,7 @@
                     }
                 }
                 ?>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xll-2">
                     <div class="block border animation-bs">
                         <div class="block_head">
                             <div class="head b-flex">
