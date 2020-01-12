@@ -1,6 +1,8 @@
 <h1 class="text-center">Форум</h1>
 <div class="container">
+    <div id="ajaxAnsw"></div>
     <form method="post" class="comment-form">
+        <input type="hidden" name="forum" value="forum">
         <div class="form-group">
             <label for="validationServer01" class="col-form-label-lg">Имя</label>
             <input type="text" class="form-control-lg form-control name animation-bs border"
@@ -16,10 +18,20 @@
                       rows="3"></textarea>
             <div id="ansMessage"></div>
         </div>
+        <div class="captcha_wrapper">
+            <div class="g-recaptcha" data-sitekey="6LfnLc4UAAAAAHUoWosf_p7wr3d9AAQHE79pIxyS"></div>
+        </div>
     </form>
-    <button class="btn btn-pink btn-lg" name="submit" type="submit" id="ajaxComm">Отправить</button>
+    <button class="btn btn-pink btn-lg" name="submit" type="submit" style="margin-top: 15px;" id="ajaxComm">Отправить</button>
+    <form action="" style="margin-top: 30px;">
+        <select class="form-control btn-primary" data-style="" >
+            <option value="">Старые</option>
+            <option value="">Новые</option>
+        </select>
+
+    </form>
     <?php
-    $sql = mysqli("SELECT * FROM `hat`");
+    $sql = mysqli("SELECT * FROM `hat` WHERE `parent_id` IS NULL");
     foreach ($sql as $item) {
         ?>
         <div class="block border">
