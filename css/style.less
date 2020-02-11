@@ -11,9 +11,12 @@
 @bg4: #fe5aa7;
 @bg5: #5d22b7;
 @bg6: #f97f71;
+@bg7: #5260B7;
+@linear-gradient: linear-gradient( 90deg, @bg3 0%,@bg7 100%);
 @cr: #fff;
 @ff: 'SoftLineExtra';
 @ff2: 'Righteous';
+
 body {
   font-family: @ff, sans-serif;
   font-weight: normal;
@@ -54,7 +57,8 @@ div {
 }
 
 .header {
-  background: @bg1;
+  background: @linear-gradient;
+  border-radius: 0 0 100% 100%;
   padding: 10px 10px 0 10px;
 }
 

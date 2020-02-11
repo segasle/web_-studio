@@ -112,5 +112,18 @@ require 'functions/meta.php';
                 </div>
             </div>
         </div>
+      <div class="d-flex">
+        <div class="tagline">
+
+          <h1 class="text-center">У нас нет преград</h1>
+          <div class="block_text">
+            <p class="text h4 text-justify
+}">Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.</p>
+          </div>
+        </div>
+        <div class="tagline-img">
+          <img src="/images/header.png" width="769" height="371" alt="">
+        </div>
+      </div>
     </header>
     <main class="content ndra-container bg-images">

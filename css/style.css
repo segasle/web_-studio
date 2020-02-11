@@ -339,7 +339,8 @@ div:before {
   overflow-x: hidden;
 }
 .header {
-  background: #1e3189;
+  background: linear-gradient(90deg, #3a126b 0%, #5260B7 100%);
+  border-radius: 0 0 100% 100%;
   padding: 10px 10px 0 10px;
 }
 .invalid-feedback {
