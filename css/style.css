@@ -451,6 +451,9 @@ div:before {
 .modal-backdrop {
   z-index: -2;
 }
+.modal-forum .form-control {
+  color: black;
+}
 .menu .navbar-light .active {
   border-bottom: 2px solid #f97f71;
 }
