@@ -88,27 +88,27 @@ require 'functions/meta.php';
             </div>
             <div class="col-12 col-sm-12 col-md-8 col-lg-12 col-xl-5 order-xs-3">
                 <div class="info">
-                    <div class="row align-items-center">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-5">
+                    <ul class="d-flex">
+                        <li class="">
                             <a href="https://api.whatsapp.com/send?phone=<?php echo $array['phone']; ?>"
-                               class="btn btn-md btn-pink btn-block"
+                               class=""
                                target="_blank">
-                                <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Написать в WhatsÂpp</span>
+                              <img src="/images/icons/whatsapp.svg" alt="вотсап" width="32" height="32">
                             </a>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                            <a href="viber://chat?number=<?php echo $array['phone']; ?>" class="btn btn-md btn-pink btn-block"
+                        </li>
+                        <li class="c">
+                            <a href="viber://chat?number=<?php echo $array['phone']; ?>" class=""
                                target="_blank">
-                                <i class="fab fa-viber"></i><span>Написать в Viber</span>
+                              <img src="/images/icons/viber.svg" alt="вийбер" width="32" height="32">
                             </a>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-4  col-xl-3">
-                            <a href="mailto:<?php echo $array['email']; ?>" class="btn btn-md btn-pink btn-block"
+                        </li>
+                        <li class="">
+                            <a href="mailto:<?php echo $array['email']; ?>" class=""
                                target="_blank">
-                                <i class="fas fa-envelope"></i><span>Написать на почту</span>
+                                <?php echo $array['email']; ?>
                             </a>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
