@@ -553,11 +553,6 @@ div:before {
     margin: 10px 0;
   }
 }
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1440px;
-  }
-}
 @media (min-width: 768px) {
   .header {
     padding: 35px 0;
