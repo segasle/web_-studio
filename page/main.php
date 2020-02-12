@@ -1,11 +1,6 @@
 <div class="wrap">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6">
-            <h1 class="text-center">У нас нет преград</h1>
-            <div class="block_text">
-                <p class="text h4 text-justify
-}">Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.</p>
-            </div>
             <h2 class="text-center" style="margin-bottom: 15px; margin-top: 15px;">Команда</h2>
             <div class="row">
 

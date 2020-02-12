@@ -28,7 +28,7 @@ require 'functions/meta.php';
 
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/icons/css/all.min.css">
-
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -51,78 +51,82 @@ require 'functions/meta.php';
     <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+<div class="layout"></div>
 <div class="wrapper">
     <header class="header">
+      <div class="container">
+
         <div class="row align-items-center">
-            <div class="col-5 col-sm-6 col-md-2 col-lg-2 col-xl-1 order-xs-2">
-                <div class="logo">
-                    <a href="/" class="logo-link"></a>
-                </div>
+          <div class="col-5 col-sm-6 col-md-2 col-lg-2 col-xl-2 order-xs-2">
+            <div class="logo">
+              <a href="/" class="logo-link"></a>
             </div>
-            <div class="col-7 col-sm-6 col-md-2 col-lg-10 col-xl-6 order-xs-1">
-                <div class="menu">
-                    <nav class="navbar navbar-expand-lg navbar-light justify-content-flex-end">
-                        <input type="checkbox" id="checkbox" class="d-none">
-                        <label for="checkbox" class="label-none burger">
-                            <span class="fas fa-align-justify fa-3x" id="btnMenu"></span>
-                        </label>
-                        <div class="collapse navbar-collapse bg-light" id="navbarNav">
-                            <ul class="navbar-nav justify-content-space-between w-100">
-                                <?php
+          </div>
+          <div class="col-7 col-sm-6 col-md-2 col-lg-10 col-xl-6 order-xs-1">
+            <div class="menu">
+              <nav class="navbar navbar-expand-lg navbar-light justify-content-flex-end">
+                <input type="checkbox" id="checkbox" class="d-none">
+                <label for="checkbox" class="label-none burger">
+                  <span class="fas fa-align-justify fa-3x" id="btnMenu"></span>
+                </label>
+                <div class="collapse navbar-collapse bg-light" id="navbarNav">
+                  <ul class="navbar-nav justify-content-space-between w-100">
+                      <?php
 
-                                $url = basename($_SERVER['REQUEST_URI']);
-                                $sql = mysqli('SELECT * FROM `menu`');
-                                foreach ($sql as $r) {
-                                    if ($r['link'] === $url) {
-                                        $active = 'active';
-                                    } else {
-                                        $active = '';
-                                    }
-                                    echo "<li class='nav-item " . $active . "'><a href='" . $r['link'] . "' class='nav-link'>" . $r['title'] . "</a></li>";
-                                }
-                                ?>
-                            </ul>
-                        </div>
-                    </nav>
+                      $url = basename($_SERVER['REQUEST_URI']);
+                      $sql = mysqli('SELECT * FROM `menu`');
+                      foreach ($sql as $r) {
+                          if ($r['link'] === $url) {
+                              $active = 'active';
+                          } else {
+                              $active = '';
+                          }
+                          echo "<li class='nav-item " . $active . "'><a href='" . $r['link'] . "' class='nav-link'>" . $r['title'] . "</a></li>";
+                      }
+                      ?>
+                  </ul>
                 </div>
+              </nav>
             </div>
-            <div class="col-12 col-sm-12 col-md-8 col-lg-12 col-xl-5 order-xs-3">
-                <div class="info">
-                    <ul class="d-flex">
-                        <li class="">
-                            <a href="https://api.whatsapp.com/send?phone=<?php echo $array['phone']; ?>"
-                               class=""
-                               target="_blank">
-                              <img src="/images/icons/whatsapp.svg" alt="вотсап" width="32" height="32">
-                            </a>
-                        </li>
-                        <li class="c">
-                            <a href="viber://chat?number=<?php echo $array['phone']; ?>" class=""
-                               target="_blank">
-                              <img src="/images/icons/viber.svg" alt="вийбер" width="32" height="32">
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="mailto:<?php echo $array['email']; ?>" class=""
-                               target="_blank">
-                                <?php echo $array['email']; ?>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-8 col-lg-12 col-xl-4 order-xs-3">
+            <div class="info">
+              <ul class="d-flex">
+                <li class="">
+                  <a href="https://api.whatsapp.com/send?phone=<?php echo $array['phone']; ?>"
+                     class=""
+                     target="_blank">
+                    <img src="/images/icons/whatsapp.svg" alt="вотсап" width="32" height="32">
+                  </a>
+                </li>
+                <li class="">
+                  <a href="viber://chat?number=<?php echo $array['phone']; ?>" class=""
+                     target="_blank">
+                    <img src="/images/icons/viber.svg" alt="вийбер" width="32" height="32">
+                  </a>
+                </li>
+                <li class="">
+                  <a href="mailto:<?php echo $array['email']; ?>" class=""
+                     target="_blank">
+                      <?php echo $array['email']; ?>
+                  </a>
+                </li>
+              </ul>
             </div>
-        </div>
-      <div class="d-flex">
-        <div class="tagline">
-
-          <h1 class="text-center">У нас нет преград</h1>
-          <div class="block_text">
-            <p class="text h4 text-justify
-}">Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.</p>
           </div>
         </div>
-        <div class="tagline-img">
-          <img src="/images/header.png" width="769" height="371" alt="">
+        <div class="d-flex">
+          <div class="tagline">
+
+            <h1 class="text-center">У нас нет преград</h1>
+            <div class="block_text">
+              <p class="text h4 text-justify
+}">Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.</p>
+            </div>
+          </div>
+          <div class="tagline-img">
+            <img src="/images/header.png" width="769" height="371" alt="">
+          </div>
         </div>
       </div>
     </header>
