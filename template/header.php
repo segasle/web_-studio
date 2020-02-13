@@ -61,12 +61,12 @@ require 'functions/meta.php';
 <div class="wrapper">
   <header class="header">
     <div class="row align-items-center">
-      <div class="col-5 col-sm-6 col-md-2 col-lg-2 col-xl-2 order-xs-2">
+      <div class="col-5 col-sm-6 col-md-2 col-lg-2 col-xl-1 order-xs-2">
         <div class="logo">
           <a href="/" class="logo-link"></a>
         </div>
       </div>
-      <div class="col-7 col-sm-6 col-md-2 col-lg-10 col-xl-6 order-xs-1">
+      <div class="col-7 col-sm-6 col-md-2 col-lg-10 col-xl-7 order-xs-1">
         <div class="menu">
           <nav class="navbar navbar-expand-lg navbar-light justify-content-flex-end">
             <input type="checkbox" id="checkbox" class="d-none">
@@ -74,7 +74,7 @@ require 'functions/meta.php';
               <span class="fas fa-align-justify fa-3x" id="btnMenu"></span>
             </label>
             <div class="collapse navbar-collapse bg-light" id="navbarNav">
-              <ul class="navbar-nav justify-content-space-between w-100">
+              <ul class="navbar-nav justify-content-space-between w-100 flex-wrap">
                   <?php
 
                   $url = basename($_SERVER['REQUEST_URI']);
