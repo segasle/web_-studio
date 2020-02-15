@@ -388,7 +388,7 @@ div:before {
   transition: box-shadow 0.5s;
 }
 .btn-pink {
-  background: #f97f71;
+  background: #3a126b;
 }
 .btn span {
   padding-left: 10px;
@@ -431,6 +431,9 @@ div:before {
 }
 .border:focus {
   border: 2px solid #2561f2 !important;
+}
+.border-bottom {
+  border-bottom: 1px solid #3a126b !important;
 }
 .block {
   margin-top: 15px;
@@ -482,7 +485,7 @@ div:before {
   font-weight: bold;
 }
 .menu .navbar-light .active {
-  border-bottom: 2px solid #f97f71;
+  border-bottom: 11px solid #f97f71;
 }
 .menu .navbar-light .active > .nav-link {
   color: #fff;
