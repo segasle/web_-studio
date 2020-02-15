@@ -96,20 +96,19 @@ require 'functions/meta.php';
       <div class="col-12 col-sm-12 col-md-8 col-lg-12 col-xl-4 order-xs-3">
         <div class="info">
           <ul class="d-flex">
-            <li class="">
+            <li class="item">
               <a href="https://api.whatsapp.com/send?phone=<?php echo $array['phone']; ?>"
-                 class=""
                  target="_blank">
                 <img src="/images/icons/whatsapp.svg" alt="вотсап" width="32" height="32">
               </a>
             </li>
-            <li class="">
+            <li class="item">
               <a href="viber://chat?number=<?php echo $array['phone']; ?>" class=""
                  target="_blank">
                 <img src="/images/icons/viber.svg" alt="вийбер" width="32" height="32">
               </a>
             </li>
-            <li class="">
+            <li class="item">
               <a href="mailto:<?php echo $array['email']; ?>" class=""
                  target="_blank">
                   <?php echo $array['email']; ?>

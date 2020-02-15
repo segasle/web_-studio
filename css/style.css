@@ -357,6 +357,9 @@ div:before {
 .info li {
   margin: 0 5px;
 }
+.info li:last-child {
+  margin-left: 30px;
+}
 .info a {
   color: #fff;
   font-weight: bold;
