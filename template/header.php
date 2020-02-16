@@ -126,7 +126,7 @@ require 'functions/meta.php';
         <div class="block_text">
           <p class="text h4 text-justify
 }">Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.</p>
-          <button class="btn btn-pink btn-lg" name="submit" type="submit" id="ajaxBut">Оставить заявку</button>
+          <button class="btn btn-purple btn-lg" name="submit" type="submit" id="ajaxBut">Оставить заявку</button>
 
         </div>
       </div>
