@@ -13,7 +13,7 @@
 @ff: 'SoftLineExtra';
 @ff2: 'Righteous';
 .layout {
-//  background-image: url("/images/layouts/main.jpg");
+  //  background-image: url("/images/layouts/main.jpg");
   width: 1440px;
   height: 5793px;
   background-position: center top;
@@ -27,6 +27,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
+  line-height: 41px;
   font-style: normal;
   font-size: 20px;
   color: @cr;
@@ -68,6 +69,23 @@ div {
   border-radius: 0 0 100% 100%;
   padding: 15px 0;
   font-size: 16px;
+
+  .btn {
+    margin-top: 30px;
+  }
+
+  .text {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+h1 {
+  font-size: 3.1em;
+  color: #acb2ff;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 41px;
 }
 
 .info {
@@ -142,7 +160,10 @@ form {
     }
 
     &:active {
-      //      background: darken(@bg8, 3%);
+      //background: darken(@bg8, 5%);
+      //#332b6f
+      //#352c73
+      //#372e77
       background: #2f2671;
       color: @cr;
       box-shadow: 0 5px 12.32px 3.68px rgba(56, 39, 122, 0.7);
@@ -465,6 +486,11 @@ form {
 @media (min-width: 768px) {
   .header {
     padding: 35px 100px;
+
+    .border-bottom {
+      padding-top: 20px;
+      margin-bottom: 80px;
+    }
   }
 }
 

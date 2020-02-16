@@ -314,6 +314,7 @@ template {
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
+  line-height: 41px;
   font-style: normal;
   font-size: 20px;
   color: #fff;
@@ -348,6 +349,20 @@ div:before {
   border-radius: 0 0 100% 100%;
   padding: 15px 0;
   font-size: 16px;
+}
+.header .btn {
+  margin-top: 30px;
+}
+.header .text {
+  font-weight: bold;
+  font-size: 20px;
+}
+h1 {
+  font-size: 3.1em;
+  color: #acb2ff;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 41px;
 }
 .info ul {
   list-style: none;
@@ -583,6 +598,10 @@ div:before {
 @media (min-width: 768px) {
   .header {
     padding: 35px 100px;
+  }
+  .header .border-bottom {
+    padding-top: 20px;
+    margin-bottom: 80px;
   }
 }
 @media (min-width: 2000px) {

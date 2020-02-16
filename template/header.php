@@ -27,8 +27,7 @@ require 'functions/meta.php';
 
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/icons/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap&subset=cyrillic"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -118,14 +117,13 @@ require 'functions/meta.php';
         </div>
       </div>
     </div>
-    <div class="border-bottom" style="padding-top: 20px;"></div>
+    <div class="border-bottom" style=""></div>
     <div class="d-flex">
       <div class="tagline">
 
-        <h1 class="text-center">У нас нет преград</h1>
+        <h1>У нас нет преград</h1>
         <div class="block_text">
-          <p class="text h4 text-justify
-}">Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.</p>
+          <p class="text">Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.</p>
           <button class="btn btn-purple btn-lg" name="submit" type="submit" id="ajaxBut">Оставить заявку</button>
 
         </div>
