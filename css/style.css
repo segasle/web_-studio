@@ -344,11 +344,30 @@ div:before {
 .wrapper {
   overflow-x: hidden;
 }
+.relative {
+  position: relative;
+}
 .header {
   background: linear-gradient(90deg, #3a126b 0%, #5260B7 100%);
   border-radius: 0 0 100% 100%;
   padding: 15px 0;
   font-size: 16px;
+}
+.header .tagline {
+  width: 100%;
+}
+.header .tagline-img {
+  width: 108%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 87%;
+}
+.header .bg {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  min-height: 100%;
 }
 .header .btn {
   margin-top: 30px;
@@ -602,6 +621,15 @@ h1 {
   .header .border-bottom {
     padding-top: 20px;
     margin-bottom: 80px;
+  }
+  .header .tagline {
+    width: 42%;
+  }
+  .header .tagline-img {
+    width: 58%;
+    position: initial;
+    min-height: 100%;
+    height: unset;
   }
 }
 @media (min-width: 2000px) {

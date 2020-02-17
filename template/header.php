@@ -117,8 +117,9 @@ require 'functions/meta.php';
         </div>
       </div>
     </div>
-    <div class="border-bottom" style=""></div>
-    <div class="d-flex">
+    <div class="border-bottom"></div>
+
+    <div class="d-flex flex-wrap relative">
       <div class="tagline">
 
         <h1>У нас нет преград</h1>
@@ -129,7 +130,7 @@ require 'functions/meta.php';
         </div>
       </div>
       <div class="tagline-img">
-        <img src="/images/header.png" width="769" height="371" alt="">
+        <div class="bg"  style="background-image: url('/images/header.png');"></div>
       </div>
     </div>
   </header>
