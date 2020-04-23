@@ -61,12 +61,14 @@ require 'functions/meta.php';
 <body>
 <div class="wrapper">
     <header class="header">
-        <div class="d-flex flex-wrap align-items-center justify-content-xl-between relative">
-            <div class="logo mr-auto mr-md-0">
-                <a href="/" class="logo-link">
-                    <object data="/images/icons/Pages.svg" class="w-100"></object>
-                </a>
-            </div>
+        <div class="container">
+
+            <div class="d-flex flex-wrap align-items-center justify-content-xl-between relative">
+                <div class="logo mr-auto mr-md-0">
+                    <a href="/" class="logo-link">
+                        <object data="/images/icons/Pages.svg" class="w-100"></object>
+                    </a>
+                </div>
 
                 <div class="menu">
                     <nav class="navbar navbar-expand-md navbar-light justify-content-flex-end">
@@ -116,26 +118,30 @@ require 'functions/meta.php';
                         </li>
                     </ul>
                 </div>
-        </div>
-        <div class="border-bottom"></div>
+            </div>
+            <div class="border-bottom"></div>
 
-        <div class="d-flex flex-wrap relative">
-            <div class="tagline">
+            <div class="d-flex flex-wrap relative">
+                <div class="tagline">
 
-                <h1>У нас нет преград</h1>
-                <div class="block_text">
-                    <p class="text">Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем старое.</p>
-                    <button class="btn btn-purple btn-lg" name="submit" type="submit" id="ajaxBut">Оставить заявку
-                    </button>
+                    <h1>У нас нет преград</h1>
+                    <div class="block_text">
+                        <p class="text">Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем
+                            старое.</p>
+                        <button class="btn btn-purple btn-lg" name="submit" type="submit" id="ajaxBut">Оставить заявку
+                        </button>
 
+                    </div>
+                </div>
+                <div class="tagline-img">
+                    <img src="/images/header.png" alt="" class="bg">
                 </div>
             </div>
-            <div class="tagline-img">
-                <img src="/images/header.png" alt="" class="bg">
-            </div>
         </div>
+
     </header>
     <div class="feedback">
-        <button class="btn btn-light-pink btn-email" type="button"><i class="far fa-envelope fa-2x d-md-none"></i><span class="btn-text d-none d-md-block">Отправьте нам собщение</span></button>
+        <button class="btn btn-light-pink btn-email" type="button"><i class="far fa-envelope fa-2x d-md-none"></i><span
+                    class="btn-text d-none d-md-block">Отправьте нам собщение</span></button>
     </div>
     <main class="content ndra-container bg-images">

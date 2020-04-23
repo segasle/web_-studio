@@ -351,7 +351,7 @@ div:before {
   min-height: 348px;
 }
 .header {
-  padding: 15px 20px;
+  padding: 15px 0;
   background-image: url("../images/bg-sm.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -619,6 +619,11 @@ h1 {
     margin: 10px 0;
   }
 }
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1240px;
+  }
+}
 @media (min-width: 1220px) {
   .navbar-collapse {
     flex-grow: 0;
@@ -682,7 +687,7 @@ h1 {
   }
   .header {
     font-size: 16px;
-    padding: 35px 25px 160px;
+    padding: 35px 0 160px;
     background-image: url("../images/bg-lg.png");
   }
   .header .btn {
