@@ -347,37 +347,28 @@ div:before {
 .relative {
   position: relative;
 }
+.h-min-header {
+  min-height: 348px;
+}
 .header {
-  background: linear-gradient(90deg, #3a126b 0%, #5260B7 100%);
-  border-radius: 0 0 100% 100%;
-  padding: 15px 0;
-  font-size: 16px;
+  padding: 15px 20px;
+  background-image: url("../images/bg-sm.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .header .tagline {
   width: 100%;
 }
-.header .tagline-img {
-  width: 108%;
-  height: 100px;
-  position: absolute;
-  bottom: 0;
-  left: 87%;
-}
-.header .bg {
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-  min-height: 100%;
-}
 .header .btn {
-  margin-top: 30px;
+  margin-top: 5px;
 }
 .header .text {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 14px;
+  line-height: 20px;
 }
 h1 {
-  font-size: 3.1em;
+  font-size: 16px;
   color: #acb2ff;
   font-weight: bold;
   font-style: normal;
@@ -386,6 +377,7 @@ h1 {
 .info ul {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 .info li {
   margin: 0 5px;
@@ -420,12 +412,12 @@ h1 {
   -o-transition: box-shadow 0.5s;
   transition: box-shadow 0.5s;
 }
-.btn-pink {
-  background: #f97f71;
+.btn-light-pink {
+  background: #ffddeb;
 }
 .btn-purple {
-  background: #3f3589;
-  box-shadow: 0 1px 21px 0 #3f3589;
+  background: #331C6E;
+  box-shadow: 0 1px 21px 0 #331C6E;
 }
 .btn-purple:hover {
   color: #fff;
@@ -437,20 +429,37 @@ h1 {
   box-shadow: 0 5px 12.32px 3.68px rgba(56, 39, 122, 0.7);
 }
 .btn-lg {
-  border-radius: 50px;
-  padding: 20px 30px;
+  border-radius: 15px;
+  padding: 10px;
+  font-size: 12px;
 }
 .btn span {
   padding-left: 10px;
 }
-.Кнопка {
-  background-color: #3f3589;
+.btn-email {
+  border-radius: 100%;
+  padding: 15px;
+}
+.btn-email .fa-envelope {
+  color: #000000;
 }
 .bold {
   font-weight: bold;
 }
 .b-flex {
   display: flex;
+}
+.bg {
+  object-fit: contain;
+  float: right;
+  width: 50%;
+  min-height: 100%;
+}
+.bg-light {
+  background: -moz- linear-gradient(90deg, #331C6E 0%, #5260B7 100%);
+  background: -webkit- linear-gradient(90deg, #331C6E 0%, #5260B7 100%);
+  background: -ms- linear-gradient(90deg, #331C6E 0%, #5260B7 100%);
+  background: linear-gradient(90deg, #331C6E 0%, #5260B7 100%);
 }
 .bg-images {
   background-image: url('/images/monitor-1307227.jpg');
@@ -503,16 +512,9 @@ h1 {
   margin: 15px;
   padding: 0;
 }
-.logo-link {
-  background-image: url("/images/logo-light.png");
-  -moz-background-image: url("/images/logo-light.png");
-  -o-background-image: url("/images/logo-light.png");
-  -webkit-background-image: url("/images/logo-light.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+.logo {
   width: 120px;
   height: 120px;
-  display: inline-block;
 }
 .margin-50 {
   margin: 50px 0;
@@ -526,22 +528,40 @@ h1 {
 .modal-forum .form-control {
   color: black;
 }
-.menu .nav-link {
+.feedback {
+  padding-left: 20px;
+}
+.menu {
+  flex-grow: 1;
+}
+.menu .navbar .nav-link {
+  font-size: 12px;
+  padding: 0;
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
 }
-.menu .navbar-light .active {
-  border-bottom: 11px solid #f97f71;
+.menu .navbar .nav-item {
+  line-height: 25px;
 }
-.menu .navbar-light .active > .nav-link {
-  color: #fff;
-}
-.menu #checkbox:checked ~ .collapse {
-  display: block;
-  position: absolute;
-  top: 100%;
-  z-index: 10;
+@media (max-width: 767px) {
+  .menu .navbar {
+    position: initial;
+  }
+  .menu .navbar-light .active {
+    border-bottom: 11px solid #f97f71;
+  }
+  .menu .navbar-light .active > .nav-link {
+    color: #fff;
+  }
+  .menu #checkbox:checked ~ .collapse {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
 }
 .card {
   background-color: transparent;
@@ -582,29 +602,14 @@ h1 {
   .menu .navbar {
     padding: 0;
   }
-  .menu .navbar-light .active > .nav-link {
-    color: black;
-  }
   .menu ul {
     padding: 0 20px;
   }
   .justify-content-flex-end {
     justify-content: flex-end;
   }
-  header .align-items-center {
-    align-items: inherit !important;
-  }
 }
 @media (min-width: 992px) {
-  .label-none {
-    display: none;
-  }
-  .bg-light {
-    background-color: transparent !important;
-  }
-  .navbar-light .navbar-nav .nav-link {
-    color: #fff;
-  }
   .justify-content-space-between {
     justify-content: space-between;
   }
@@ -614,22 +619,99 @@ h1 {
     margin: 10px 0;
   }
 }
+@media (min-width: 1220px) {
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+  .nav-item {
+    margin: 0 26px;
+  }
+  .nav-item:last-child {
+    margin-right: 0;
+  }
+}
 @media (min-width: 768px) {
+  .h-min-header {
+    min-height: 838px;
+  }
+  h1 {
+    font-size: 1.5em;
+    line-height: 41px;
+  }
+  .btn-lg {
+    border-radius: 36.5px;
+    padding: 20px;
+    font-size: 23px;
+  }
+  .btn-email {
+    border-radius: 0 0 50px 50px;
+    background: #e66ea5;
+    transform: rotate(-90deg);
+    z-index: 999;
+    position: fixed;
+    left: -100px;
+    top: 50%;
+  }
+  .label-none {
+    display: none;
+  }
+  .bg {
+    float: none;
+    width: 100%;
+  }
+  .bg-light {
+    background: transparent !important;
+  }
+  .menu .navbar-light .active {
+    position: relative;
+  }
+  .menu .navbar-light .active:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 11px;
+    background: #e66ea5;
+    bottom: -265%;
+  }
+  .menu .navbar .nav-link {
+    font-size: initial;
+  }
+  h1 {
+    font-size: 3.1em;
+  }
   .header {
-    padding: 35px 100px 160px;
+    font-size: 16px;
+    padding: 35px 25px 160px;
+    background-image: url("../images/bg-lg.png");
+  }
+  .header .btn {
+    margin-top: 30px;
+  }
+  .header .text {
+    line-height: inherit;
+    font-size: 20px;
   }
   .header .border-bottom {
     padding-top: 20px;
     margin-bottom: 80px;
   }
   .header .tagline {
-    width: 42%;
+    width: 60%;
   }
   .header .tagline-img {
-    width: 58%;
+    width: 40%;
     position: initial;
     min-height: 100%;
     height: unset;
+  }
+  .header .tagline-img-img {
+    width: 108%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    color: #470f00;
+    left: 87%;
   }
 }
 @media (min-width: 2000px) {
@@ -640,6 +722,16 @@ h1 {
   .col-xll-3 {
     flex: 0 0 25%;
     max-width: 25%;
+  }
+}
+@media (min-width: 768px) and (max-width: 772px) {
+  .header {
+    font-size: 14px;
+  }
+}
+@media (min-width: 773px) and (max-width: 809px) {
+  .header {
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
