@@ -1,7 +1,53 @@
 </main>
-<footer>
+<footer id="contacts">
+
     <div class="footer">
-        <p>Все права защищены &copy;2019  - <?php echo date("Y")?> </p>
+        <div class="container">
+            <p class="h5 text-center footer-head">Контакты</p>
+            <div class="row footer-body">
+                <div class="col-12 col-md-6">
+                    <div class="d-table mr-auto ml-auto">
+
+                        <p class="h5 bold text-body">Директор</p>
+                        <?php
+                        $sql = mysqli('SELECT * FROM `contacts`');
+                        $array = mysqli_fetch_array($sql);
+                        //print_r($array);
+
+                        ?>
+                        <p><?php echo $array['fio']; ?></p>
+                        <p class="h5 bold text-body">Email:</p><a href="mailto:<?php echo $array['email']; ?>" class="d-block text-light"> <?php echo $array['email']; ?></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="d-table mr-auto ml-auto">
+
+                        <p class="h5 bold text-body">Время работы</p>
+                        <p class="text-light text-uppercase">пн-вс: 10:00-22:00</p>
+                        <div class="info">
+                            <ul class="d-flex">
+                                <li class="item">
+                                    <a href="https://api.whatsapp.com/send?phone=<?php echo $array['phone']; ?>"
+                                       target="_blank">
+                                        <object data="/images/icons/whatsapp.svg" width="32" height="32"></object>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="viber://chat?number=<?php echo $array['phone']; ?>" class=""
+                                       target="_blank">
+                                        <object data="/images/icons/viber.svg" width="32" height="32"></object>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="border-top border-bottom">
+                <p class="text-body">Все права защищены &copy;2019  - <?php echo date("Y")?> </p>
+            </div>
+        </div>
     </div>
 </footer>
 </div>
@@ -22,6 +68,12 @@
         crossorigin="anonymous"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="/library/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="/js/fileinput.js"></script>
+<script src="/js/swiper.js?t=<?php echo(microtime(true) . rand()); ?>"></script>
+<script src="/js/input.js?t=<?php echo(microtime(true) . rand()); ?>"></script>
 <script src="/js/main.js?t=<?php echo(microtime(true) . rand()); ?>"></script>
+<script src="/js/side.js?t=<?php echo(microtime(true) . rand()); ?>"></script>
 </body>
 </html>

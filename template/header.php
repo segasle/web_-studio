@@ -34,6 +34,11 @@ require 'functions/meta.php';
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="/css/style.css?t=<?php echo(microtime(true) . rand()); ?>">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -57,6 +62,7 @@ require 'functions/meta.php';
         <div><img src="https://mc.yandex.ru/watch/55707283" style="position:absolute; left:-9999px;" alt=""/></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
+    <script src="//code-ya.jivosite.com/widget/foEwKCfaiA" async></script>
 </head>
 <body>
 <div class="wrapper">
@@ -128,20 +134,49 @@ require 'functions/meta.php';
                     <div class="block_text">
                         <p class="text">Мы - команда профессиональных WEB-разработчиков, создаем новое, улучшаем
                             старое.</p>
-                        <button class="btn btn-purple btn-lg" name="submit" type="submit" id="ajaxBut">Оставить заявку
-                        </button>
+                        <?php
+                        $main = 'main';
+                        $services = 'services';
+                        $page = $_GET['page'];
+                        if ($page === $main or empty($page) or $page == $services) { ?>
+                            <a href="#request" class="btn btn-purple btn-lg">Оставить заявку
+                            </a>
+                        <?php } else {
+                            ?>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-purple btn-lg" data-toggle="modal" data-target="#exampleModal">
+                                Оставить заявку
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog container">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <?php include 'template/form.php'; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
 
                     </div>
                 </div>
                 <div class="tagline-img">
-                    <img src="/images/header.png" alt="" class="bg">
+                    <img src="/images/header.png" alt="" class="bg-header-img">
                 </div>
             </div>
         </div>
 
     </header>
-    <div class="feedback">
-        <button class="btn btn-light-pink btn-email" type="button"><i class="far fa-envelope fa-2x d-md-none"></i><span
-                    class="btn-text d-none d-md-block">Отправьте нам собщение</span></button>
-    </div>
-    <main class="content ndra-container bg-images">
+<!--    <div class="feedback">-->
+<!--        <button class="btn btn-light-pink btn-email" type="button"><i class="far fa-envelope fa-2x d-md-none"></i><span-->
+<!--                    class="btn-text d-none d-md-block">Отправьте нам собщение</span></button>-->
+<!--    </div>-->
+    <main class="content ndra-container">

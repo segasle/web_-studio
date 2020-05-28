@@ -60,7 +60,7 @@ $(function() {
                     $('.topic').addClass('is-invalid');
                     $('.message').addClass('is-invalid');
                 } else if (data == 1) {
-                    $('#ajaxAnsw').html('<div class="alert alert-success">Успешно отправлено</div>').delay(3200).fadeOut(300);
+                    $('#ajaxAnsw').html('<div class="alert-success">Спасибо! Ваша заявка отправлена!</div>').delay(7000).fadeOut(300);
                     $('.name').val('');
                     $('.phone-number').val('');
                     $('.email').val('');

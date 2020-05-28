@@ -287,8 +287,7 @@ function postarticles() {
     foreach ($sql as $item){
         if ($item['link'] == $sq){
 
-            echo "<div class=\"container\">".$item['text']."
-</div>";
+            echo "<div class=\"container\"><article class='blog-article'>".$item['text']."</article></div>";
         }
     }
 //    return $out;
