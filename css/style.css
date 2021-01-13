@@ -657,6 +657,9 @@ div:before {
   .slick-center .card-body .desolation {
     line-height: inherit;
   }
+  .slick-arrow {
+    display: none;
+  }
   .slick .slick-dots {
     position: absolute;
     left: 0;
@@ -678,6 +681,18 @@ div:before {
     height: 15px;
     border: 3px solid #fff;
     background: #5260B7;
+  }
+  .slick .slick-dots li:nth-child(4) {
+    top: 100%;
+    left: 10px;
+  }
+  .slick .slick-dots li:nth-child(3) {
+    left: -7px;
+    top: 75%;
+  }
+  .slick .slick-dots li:nth-child(2) {
+    top: 50%;
+    left: -7px;
   }
   .slick .slick-dots li.slick-active {
     border: 3px solid #fff;
@@ -1168,6 +1183,30 @@ input[type="file"] {
   .content {
     padding-bottom: 260px;
   }
+  .swiper-slide:nth-child(3n) > .block:hover {
+    border-radius: 0 50px 50px 0;
+  }
+  .swiper-slide:nth-child(3n) > .block:hover > .block_price {
+    left: -100%;
+    border-radius: 50px 0 0 50px;
+  }
+  .block:hover {
+    border-radius: 50px 0 0 50px;
+  }
+  .block:hover > .block_price {
+    left: 100%;
+    z-index: 9;
+    border-radius: 0 50px 50px 0;
+  }
+  .block:hover .block_content ul li {
+    border-bottom: 5px solid white;
+  }
+}
+.fp-section.fp-table,
+.fp-slide.fp-table {
+  display: block;
+  table-layout: inherit;
+  width: 100%;
 }
 @media (max-width: 1200px) {
   .btn {
@@ -1193,6 +1232,13 @@ input[type="file"] {
 @media (min-width: 768px) {
   body {
     line-height: 41px;
+  }
+  .scroll {
+    overflow: hidden;
+    height: 100%;
+  }
+  .scroll-screen {
+    flex: 1 0 100%;
   }
   .blog .card,
   .blog-article {

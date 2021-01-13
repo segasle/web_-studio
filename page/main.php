@@ -1,28 +1,31 @@
 <div class="wrap">
     <div class="container">
-        <?php include 'template/price.php'; ?>
+        <div class="section" data-anchor="slide1">
+            <?php include 'template/price.php'; ?>
+        </div>
+        <div class="section" data-anchor="slide2">
+            <p class="h5 text-center">Портфолио</p>
+            <div class="slide responsive">
+                <?php
+                $mysql = mysqli('SELECT * FROM `portfolio` JOIN `services` WHERE services.id = portfolio.id_id_services');
 
-        <p class="h5 text-center">Портфолио</p>
-        <div class="slide responsive">
-            <?php
-            $mysql = mysqli('SELECT * FROM `portfolio` JOIN `services` WHERE services.id = portfolio.id_id_services');
+                foreach ($data as $items) {
+                    foreach ($mysql as $item) {
+                        $id = $items['id'];
+                        if ($id == $item['id_id_services']) {
 
-            foreach ($data as $items) {
-                foreach ($mysql as $item) {
-                    $id = $items['id'];
-                    if ($id == $item['id_id_services']) {
-
-                        ?>
-                        <div class="">
-                            <a href="<?php echo $item['link']; ?>" target="_blank" class="card">
-                                <img class="card-img" src="<?php echo $item['images']; ?>" alt="Card image">
-                            </a>
-                        </div>
-                        <?php
+                            ?>
+                            <div class="">
+                                <a href="<?php echo $item['link']; ?>" target="_blank" class="card">
+                                    <img class="card-img" src="<?php echo $item['images']; ?>" alt="Card image">
+                                </a>
+                            </div>
+                            <?php
+                        }
                     }
                 }
-            }
-            ?>
+                ?>
+            </div>
         </div>
     </div>
 

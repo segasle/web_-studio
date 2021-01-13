@@ -1,15 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
 <?php
 $sql = mysqli('SELECT * FROM `contacts`');
 $array = mysqli_fetch_array($sql);
 //print_r($array);
 require 'functions/meta.php';
 ?>
-<!DOCTYPE html>
-<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="yandex-verification" content="de0f9966b07d3d59"/>
     <meta name="google-site-verification" content="bnlmtmDEKJwJIN9Ls7w0TO7_5QwOhk1JgBzrHPRVSp0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -23,8 +22,6 @@ require 'functions/meta.php';
           content="webpro - разработка сайтов <?php echo $keywords; ?>">
     <meta name="description" content="<?php echo $description; ?>">
     <title>Веб студия WEBPRO <?php echo $title; ?></title>
-
-
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/icons/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap&subset=cyrillic"
@@ -38,35 +35,32 @@ require 'functions/meta.php';
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="/css/style.css?t=<?php echo(microtime(true) . rand()); ?>">
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () {
-                (m[i].a = m[i].a || []).push(arguments)
-            };
-            m[i].l = 1 * new Date();
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="/css/jquery.fsscroll.css" rel="stylesheet">
+    <link href="/css/fullpage.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css?t=<?php echo(microtime(true) . rand()); ?>"><!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-        ym(55707283, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true
-        });
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/55707283" style="position:absolute; left:-9999px;" alt=""/></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
-    <script src="//code-ya.jivosite.com/widget/foEwKCfaiA" async></script>
+   ym(55707283, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true,
+        ecommerce:"dataLayer"
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/55707283" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<noscript><div><img src="https://mc.yandex.ru/watch/55707283" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 <div class="wrapper">
-    <header class="header">
+    <header class="header" >
         <div class="container">
 
             <div class="d-flex flex-wrap align-items-center justify-content-xl-between relative">
@@ -179,4 +173,4 @@ require 'functions/meta.php';
 <!--        <button class="btn btn-light-pink btn-email" type="button"><i class="far fa-envelope fa-2x d-md-none"></i><span-->
 <!--                    class="btn-text d-none d-md-block">Отправьте нам собщение</span></button>-->
 <!--    </div>-->
-    <main class="content ndra-container">
+    <main class="content ndra-container" id="fullpage">

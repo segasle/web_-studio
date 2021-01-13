@@ -54,8 +54,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
 
-<!-- (Optional) Latest compiled and minified JavaScript translation files -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-*.min.js"></script>
 <script src="https://kit.fontawesome.com/e9ba925aad.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -69,8 +67,14 @@
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="/library/jquery.maskedinput.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!--<script src="/js/jquery.fsscroll.js"></script>-->
+<!--<script src="/js/fullpage.extensions.min.js"></script>-->
+<script src="/js/fullpage.min.js"></script>
+<script src="/js/scroll.js?t=<?php echo(microtime(true) . rand()); ?>"></script>
 <script src="/js/fileinput.js"></script>
+<script src="/js/aos.js"></script>
 <script src="/js/swiper.js?t=<?php echo(microtime(true) . rand()); ?>"></script>
 <script src="/js/input.js?t=<?php echo(microtime(true) . rand()); ?>"></script>
 <script src="/js/main.js?t=<?php echo(microtime(true) . rand()); ?>"></script>

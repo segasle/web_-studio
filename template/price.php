@@ -22,7 +22,7 @@
                 }
             }
             ?>
-            <div class="swiper-slide">
+            <div class="swiper-slide" data-aos="zoom-in-up" data-aos-duration="<?php echo $item['time']; ?>">
                 <div class="block border relative" style="min-height: 358px;">
                     <div class="block_head">
                         <div class="head">
@@ -44,7 +44,7 @@
                         <div class="block_head">
                             <div class="head">
                                 <p class="text-center bold">
-                                    <?php echo $item['title']; ?></p>
+                                    Цена</p>
                             </div>
                         </div>
                         <div class="block_content">

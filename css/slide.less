@@ -321,6 +321,9 @@
     }
 
     &-arrow {
+      //@media (min-width: 768px){
+        display: none;
+      //}
     }
 
     &-prev {
@@ -348,7 +351,6 @@
         li {
           position: absolute;
           left: 0;
-
           @br: 3px solid @cr;
           @wh: 15px;
           margin: 0;
@@ -356,13 +358,23 @@
           height: @wh;
           border: @br;
           background: @bg7;
+          &:nth-child(4){
+            top: 100%;
+            left: 10px;
+          }
+          &:nth-child(3){
+            left: -7px;
+            top: 75%;
+          }
+          &:nth-child(2){
+            top: 50%;
+            left: -7px;
+          }
           &.slick-active {
             border: @br;
-
             @wh: 24px;
             width: @wh;
             height: @wh;
-
           }
 
           button {

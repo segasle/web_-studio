@@ -55,29 +55,6 @@ $(document).ready(function () {
         ],
     });
     $('.comments-slide').slick({
-        // prevArrow: 'fas fa-angle-left',
-        // nextArrow: '.fas .fa-angle-right',
-        // slidesToShow: 2,
-        // slidesToScroll: 1,
-        // dots: true,
         autoplay: true,
-        // speed: 5000,
-        // arrow: false,
-        // infinite: false,
-        // vertical: true,
-        // centerMode: true,
-        //
-        // responsive: [
-        //     {
-        //         breakpoint: 767,
-        //         settings: {
-        //             slidesToShow: 1,
-        //             arrow: true,
-        //             vertical: false,
-        //             centerMode: false,
-        //
-        //         }
-        //     }
-        // ],
     });
 });

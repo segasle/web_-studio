@@ -1,16 +1,5 @@
 $(document).ready(function () {
-    let slider = document.querySelector('.swiper-container');
-// let mySwiper = new Swiper(slider, {
-// 	slidesPerView: 3,
-// 	spaceBetween: 10,
-// 	loop: true,
-// 	pagination: {
-// 		el: '.swiper-pagination',
-// 		clickable: true,
-// 	},
-
-// })
-
+    const slider = document.querySelector('.swiper-container');
     let mySwiper;
 
     function mobileSlider() {
@@ -55,4 +44,19 @@ $(document).ready(function () {
     window.addEventListener('resize', () => {
         mobileSlider();
     });
+
 });
+// $(document).ready(function () {
+// //    сщтые ыцшзукЫскщдд = вщсгьутеюйгукнЫудусещк(эюыцшзук-ыскщддэ)ж
+//
+//     const swiperScroll = new Swiper('.swiper-scroll', {
+//         wrapperClass: 'scroll-wrapper',
+//         slideClass: 'scroll-container',
+//         direction: 'vertical',
+//
+//         pagination: {
+//             el: '.swiper-pagination',
+//             clickable: true,
+//         },
+//     });
+// });

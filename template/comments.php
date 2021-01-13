@@ -20,7 +20,7 @@
                                     </div>
                                 </div>
                                 <div class="comments-images rounded-circle">
-                                    <img src="/images/<?php echo $item['sex']?>.png" class="images">
+                                    <img src="/images/<?php echo $item['sex']?>.png" class="images" alt="">
 
                                 </div>
                                 <div class="comments-content">
@@ -30,7 +30,7 @@
                                                 <p  class="head-text h4"><i><?php echo $item['name']; ?></i></p>
                                             </div>
                                             <div class="head-date d-none d-md-block">
-                                                <p class="head-text h4"><time><?php echo $date->format('d.m.Y H:i:s'); ?></time>
+                                                <p class="head-text h4"><time datetime="<?php echo $item['date']; ?>"><?php echo $date->format('d.m.Y H:i:s'); ?></time>
                                                 </p>
                                             </div>
                                         </div>
